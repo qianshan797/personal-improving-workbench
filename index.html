@@ -8844,6 +8844,7 @@ window.__newsFetchPromise = (function() {
                                 <option value="low">低优先级</option>
                             </select>
                             <div class="platform-checkbox-group" id="newTaskPlatform">
+                                <span class="checkbox-hint" style="width:100%;">适用平台（可选，个人日常安排可跳过）</span>
                                 <label><input type="checkbox" value="公众号">公众号</label>
                                 <label><input type="checkbox" value="抖音">抖音</label>
                                 <label><input type="checkbox" value="小红书">小红书</label>
@@ -13538,6 +13539,7 @@ CREATE POLICY "allow_all" ON workbench_sync
                     </select>
                     <div class="flex-line-break"></div>
                     <div class="platform-checkbox-group" id="calendarNewTaskPlatform">
+                        <span class="checkbox-hint" style="width:100%;">适用平台（可选）</span>
                         <label><input type="checkbox" value="公众号">公众号</label>
                         <label><input type="checkbox" value="抖音">抖音</label>
                         <label><input type="checkbox" value="小红书">小红书</label>
@@ -13650,16 +13652,12 @@ CREATE POLICY "allow_all" ON workbench_sync
             }
 
             const platform = getSelectedPlatforms('calendarNewTaskPlatform');
-            if (!platform) {
-                showToast('请至少选择一个平台', 'error');
-                return;
-            }
 
             // 检查是否已存在相同的待处理任务（去重）
             const isDuplicate = tasks.some(t =>
                 t.status === 'pending' &&
                 t.title === title &&
-                t.platform === platform &&
+                (t.platform || '') === (platform || '') &&
                 t.dueDate === dateStr
             );
             if (isDuplicate) {
@@ -14300,7 +14298,7 @@ CREATE POLICY "allow_all" ON workbench_sync
                 type: 'task',
                 id: t.id,
                 title: t.title,
-                meta: `${t.platform} · ${getStatusText(t.status)}`,
+                meta: `${t.platform ? t.platform + ' · ' : ''}${getStatusText(t.status)}`,
                 data: t
             }));
 
@@ -15981,10 +15979,6 @@ CREATE POLICY "allow_all" ON workbench_sync
             }
 
             const platform = getSelectedPlatforms('newTaskPlatform');
-            if (!platform) {
-                showToast('请至少选择一个平台', 'error');
-                return;
-            }
 
             const finalDueDate = dueDate || (dueDateInput ? dueDateInput.value : null) || getTodayDate();
             const isDailyTask = dailyInput ? dailyInput.checked : false;
@@ -15993,7 +15987,7 @@ CREATE POLICY "allow_all" ON workbench_sync
             const isDuplicate = tasks.some(t =>
                 t.status === 'pending' &&
                 t.title === title &&
-                t.platform === platform
+                (t.platform || '') === (platform || '')
             );
             if (isDuplicate) {
                 showToast('已存在相同的待处理任务，请勿重复添加', 'error');
