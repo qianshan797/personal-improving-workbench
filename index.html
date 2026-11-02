@@ -10365,6 +10365,16 @@ CREATE POLICY "allow_all" ON workbench_sync
                             allKey[key] = t;
                             return true;
                         });
+                        // v53：云端合并后再执行"完成态优先"，丢弃已完成任务的待处理副本
+                        // 根因：v42 去重键包含 status，archived 与 pending 两个版本不会互相判重
+                        try {
+                            const _ddRes = _dedupeDailyInstances(cleaned);
+                            if (_ddRes.removedIds.length > 0) {
+                                _ddRes.removedIds.forEach(function(id) { extraDelTasks[String(id)] = Date.now(); });
+                                cleaned = _ddRes.list;
+                                console.warn('[restoreFromCloudData] v53 完成态优先：移除', _ddRes.removedIds.length, '条已完成任务的待处理副本');
+                            }
+                        } catch (eDD) { console.error('[restoreFromCloudData] v53 去重异常:', eDD); }
                         // 把去重产生的新 deleted id 合并进 deleted_tasks
                         if (Object.keys(extraDelTasks).length > 0) {
                             try {
@@ -13091,6 +13101,62 @@ CREATE POLICY "allow_all" ON workbench_sync
             }
         }
 
+        // v53：任务标题归一化（忽略中英文标点、空格差异），用于判重
+        // 例："更新账号内容：义采宝" 与 "更新账号内容-义采宝" 视为同一任务
+        function _normTaskTitle(s) {
+            return String(s || '')
+                .replace(/[：:，,、\-–—－_/｜|（）()]/g, '')
+                .replace(/\s+/g, '')
+                .trim()
+                .toLowerCase();
+        }
+
+        // v53：日常任务同日去重——同归一化标题 + 同 dueDate 时，只要存在完成态实例，
+        // 其余 pending 副本全部丢弃（修复"已完成的任务第二天/刷新后又出现"）
+        function _dedupeDailyInstances(list) {
+            var doneKeys = {};
+            list.forEach(function(t) {
+                if (t && t.isDaily === true && t.dueDate &&
+                    (t.status === 'completed' || t.status === 'archived')) {
+                    doneKeys[_normTaskTitle(t.title) + '|' + t.dueDate] = true;
+                }
+            });
+            var seenPending = {};
+            var removedIds = [];
+            var out = list.filter(function(t) {
+                if (!t || !t.title) return false;
+                if (t.isDaily !== true || !t.dueDate) return true;
+                if (t.status === 'completed' || t.status === 'archived') return true;
+                var key = _normTaskTitle(t.title) + '|' + t.dueDate;
+                // 1) 同日已有完成态实例 → 待处理副本丢弃
+                if (doneKeys[key]) {
+                    if (t.id) removedIds.push(String(t.id));
+                    return false;
+                }
+                // 2) 同归一化标题的重复 pending 实例只留一条
+                if (t.status === 'pending') {
+                    if (seenPending[key]) {
+                        if (t.id) removedIds.push(String(t.id));
+                        return false;
+                    }
+                    seenPending[key] = true;
+                }
+                return true;
+            });
+            return { list: out, removedIds: removedIds };
+        }
+
+        function _recordDeletedTaskIds(ids) {
+            if (!ids || !ids.length) return;
+            try {
+                var raw = localStorage.getItem('media_workflow_deleted_tasks');
+                var map = raw ? JSON.parse(raw) : {};
+                if (!map || typeof map !== 'object') map = {};
+                ids.forEach(function(id) { if (id) map[String(id)] = Date.now(); });
+                localStorage.setItem('media_workflow_deleted_tasks', JSON.stringify(map));
+            } catch (e) { console.error('[v53] 记录删除任务失败', e); }
+        }
+
         function generateDailyAccountTasks() {
             const today = new Date();
             const todayStr = getTodayDate();
@@ -13207,9 +13273,9 @@ CREATE POLICY "allow_all" ON workbench_sync
                 dailyTaskTemplates.forEach(template => {
                     // ✅ 修复2：去重检查不再只看 pending，同日同标题且 isDaily=true 的任务（completed/archived 也）视为已存在
                     const existingTodayDailyTask = tasks.find(t =>
-                        t.title === template.title &&
                         t.isDaily === true &&
-                        t.dueDate === todayStr
+                        t.dueDate === todayStr &&
+                        _normTaskTitle(t.title) === _normTaskTitle(template.title)
                     );
                     if (!existingTodayDailyTask) {
                         const newDailyTask = {
@@ -13244,14 +13310,26 @@ CREATE POLICY "allow_all" ON workbench_sync
                 tasks = tasks.filter(t => {
                     if (!t || !t.title) return false;
                     if (t.isDaily !== true || !t.dueDate || t.status !== 'pending') return true;
-                    const key = t.title + '|' + t.dueDate;
+                    const key = _normTaskTitle(t.title) + '|' + t.dueDate;
                     if (dailyKey[key]) return false;
                     dailyKey[key] = true;
                     return true;
                 });
                 const removed = beforeDedup - tasks.length;
                 if (removed > 0) {
-                    console.warn('[每日任务] 去重防御：移除', removed, '条重复日常实例（同 title+dueDate+isDaily 的 pending 任务只保留一条）');
+                    console.warn('[每日任务] 去重防御：移除', removed, '条重复日常实例');
+                    changed = true;
+                }
+            }
+
+            // v53 修复：同日日常任务若已有完成态实例，待处理副本必须丢弃
+            // 否则会出现"已完成的任务又回到待处理"（多端生成 / 云端合并造成）
+            {
+                const res = _dedupeDailyInstances(tasks);
+                if (res.removedIds.length > 0) {
+                    console.warn('[每日任务] v53 完成态优先：移除', res.removedIds.length, '条已完成的待处理副本');
+                    _recordDeletedTaskIds(res.removedIds);
+                    tasks = res.list;
                     changed = true;
                 }
             }
