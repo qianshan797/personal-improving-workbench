@@ -19431,11 +19431,17 @@ CREATE POLICY "allow_all" ON workbench_sync
         ];
 
         // ============ v48 主页：今日节奏仪表盘 ============
+        // 番茄钟
+        // v51 修复：后台/息屏时 setInterval 会被系统降频或冻结，改用 endTime 时间戳 + Date.now() 差值计算，
+        // 恢复可见时第一次 tick 立即用真实时间差校准，不会漏秒或多计。
+        // 同时持久化 endTime 到 localStorage，页面被系统挂起/恢复/重载后自动续上。
         const STORAGE_KEY_POMODORO = 'media_workflow_pomodoro';
         const POMODORO_FOCUS_SECONDS = 25 * 60;
         let pomodoroRemaining = POMODORO_FOCUS_SECONDS;
         let pomodoroRunning = false;
         let pomodoroTimerId = null;
+        let pomodoroEndTime = 0;        // 运行中 = 结束时间戳(ms)；暂停/停止 = 0
+        let pomodoroRunningSince = 0;   // 本轮开始时间戳(ms)，用于估算本轮专注时长（健康页累积）
 
         function _hmPad(n) { return n < 10 ? '0' + n : '' + n; }
         function _hmEsc(s) {
@@ -19738,6 +19744,60 @@ CREATE POLICY "allow_all" ON workbench_sync
         function savePomodoroState(s) {
             try { localStorage.setItem(STORAGE_KEY_POMODORO, JSON.stringify(s)); } catch (e) { }
         }
+        function savePomodoroRuntime() {
+            // v51：持久化"运行中/暂停"状态，页面恢复可见或重载时自动校准
+            try {
+                localStorage.setItem('media_workflow_pomodoro_runtime', JSON.stringify({
+                    running: pomodoroRunning,
+                    endTime: pomodoroEndTime,
+                    remaining: pomodoroRemaining,
+                    runningSince: pomodoroRunningSince,
+                    savedAt: Date.now()
+                }));
+            } catch (e) { }
+        }
+        function loadPomodoroRuntime() {
+            try {
+                const raw = localStorage.getItem('media_workflow_pomodoro_runtime');
+                if (!raw) return;
+                const rt = JSON.parse(raw);
+                if (rt && rt.running && typeof rt.endTime === 'number' && rt.endTime > Date.now()) {
+                    // 上一次是"运行中"且还没超时 → 恢复 running=true，后面 recalc 会用真实时间差校准
+                    pomodoroEndTime = rt.endTime;
+                    pomodoroRunning = true;
+                    pomodoroRunningSince = rt.runningSince || (rt.endTime - POMODORO_FOCUS_SECONDS * 1000);
+                    pomodoroRemaining = Math.max(1, Math.round((rt.endTime - Date.now()) / 1000));
+                    if (!pomodoroTimerId) {
+                        pomodoroTimerId = setInterval(pomodoroTick, 250);
+                    }
+                    renderPomodoro();
+                } else if (rt && rt.remaining && rt.remaining < POMODORO_FOCUS_SECONDS) {
+                    // 上一次是"暂停" → 恢复 remaining 但不跑定时器
+                    pomodoroRemaining = rt.remaining;
+                    pomodoroEndTime = 0;
+                    pomodoroRunning = false;
+                    pomodoroRunningSince = 0;
+                    renderPomodoro();
+                }
+            } catch (e) { }
+        }
+        function clearPomodoroRuntime() {
+            try { localStorage.removeItem('media_workflow_pomodoro_runtime'); } catch (e) { }
+        }
+        function pomodoroTick() {
+            if (!pomodoroRunning) return;
+            const remainingMs = pomodoroEndTime - Date.now();
+            pomodoroRemaining = Math.max(0, Math.round(remainingMs / 1000));
+            if (pomodoroRemaining <= 0) {
+                finishPomodoro();
+                return;
+            }
+            renderPomodoro();
+        }
+        function recalcPomodoro() {
+            // v51：在 visibilitychange / pageshow / focus 上调用一次，确保后台期间 setInterval 的漏跳被校准
+            if (pomodoroRunning) pomodoroTick();
+        }
         function renderPomodoro() {
             const tEl = document.getElementById('pomoTime');
             const stateEl = document.getElementById('pomoState');
@@ -19770,28 +19830,34 @@ CREATE POLICY "allow_all" ON workbench_sync
         function startPomodoro() {
             if (pomodoroRunning) return;
             pomodoroRunning = true;
+            // v51：设置绝对结束时间戳，tick 里用 Date.now() 算差值
+            pomodoroEndTime = Date.now() + pomodoroRemaining * 1000;
+            pomodoroRunningSince = Date.now();
             if (pomodoroTimerId) clearInterval(pomodoroTimerId);
-            pomodoroTimerId = setInterval(function() {
-                pomodoroRemaining--;
-                if (pomodoroRemaining <= 0) {
-                    finishPomodoro();
-                    return;
-                }
-                renderPomodoro();
-            }, 1000);
+            pomodoroTimerId = setInterval(pomodoroTick, 250); // 250ms 足够丝滑，又不会太耗
+            savePomodoroRuntime();
             renderPomodoro();
         }
         function pausePomodoro() {
-            if (pomodoroTimerId) clearInterval(pomodoroTimerId);
-            pomodoroTimerId = null;
+            if (pomodoroTimerId) { clearInterval(pomodoroTimerId); pomodoroTimerId = null; }
+            if (pomodoroRunning) {
+                // 暂停那一刻，用 endTime - Date.now() 回写 remaining，避免"后台冻结期间的时间被忽略"
+                const ms = pomodoroEndTime - Date.now();
+                pomodoroRemaining = Math.max(0, Math.round(ms / 1000));
+            }
+            pomodoroEndTime = 0;
             pomodoroRunning = false;
+            pomodoroRunningSince = 0;
+            savePomodoroRuntime();
             renderPomodoro();
         }
         function resetPomodoro() {
-            if (pomodoroTimerId) clearInterval(pomodoroTimerId);
-            pomodoroTimerId = null;
+            if (pomodoroTimerId) { clearInterval(pomodoroTimerId); pomodoroTimerId = null; }
             pomodoroRunning = false;
+            pomodoroEndTime = 0;
+            pomodoroRunningSince = 0;
             pomodoroRemaining = POMODORO_FOCUS_SECONDS;
+            clearPomodoroRuntime();
             renderPomodoro();
         }
         function togglePomodoro() {
@@ -19799,9 +19865,12 @@ CREATE POLICY "allow_all" ON workbench_sync
             else startPomodoro();
         }
         function finishPomodoro() {
-            if (pomodoroTimerId) clearInterval(pomodoroTimerId);
-            pomodoroTimerId = null;
+            if (pomodoroTimerId) { clearInterval(pomodoroTimerId); pomodoroTimerId = null; }
             pomodoroRunning = false;
+            pomodoroEndTime = 0;
+            pomodoroRunningSince = 0;
+            pomodoroRemaining = POMODORO_FOCUS_SECONDS;
+            clearPomodoroRuntime();
             const s = getPomodoroState();
             s.count += 1;
             s.rounds += 1;
@@ -19813,7 +19882,6 @@ CREATE POLICY "allow_all" ON workbench_sync
                 var h = getHealth();
                 var addHours = POMODORO_FOCUS_SECONDS / 3600;
                 h.daily.focusHours = Math.round(((h.daily.focusHours || 0) + addHours) * 100) / 100;
-                // 直接写本地，避免 saveHealth 内部再单独推送一次
                 localStorage.setItem(STORAGE_KEY_HEALTH, JSON.stringify(h));
                 healthUpdated = true;
             } catch (eHealth) {
@@ -19821,13 +19889,10 @@ CREATE POLICY "allow_all" ON workbench_sync
             }
             if (healthUpdated) {
                 try { if (typeof renderHealth === 'function') renderHealth(); } catch (eRender) {}
-                // 主页"今日概览"健康进度条 + "本周专注趋势"柱状图也需要立刻刷新
                 try { if (typeof renderHomeVitals === 'function') renderHomeVitals(); } catch (eHV) {}
                 try { if (typeof renderHomeMood === 'function') renderHomeMood(); } catch (eHM) {}
             }
-            // 番茄钟与健康数据一起推送一次
             if (typeof pushToCloud === 'function' && syncEnabled) pushToCloud().catch(function() {});
-            pomodoroRemaining = POMODORO_FOCUS_SECONDS;
             renderPomodoro();
             if (typeof showToast === 'function') showToast('番茄钟完成，休息 5 分钟 ☕', 'success');
         }
@@ -19889,6 +19954,16 @@ CREATE POLICY "allow_all" ON workbench_sync
                     tickHomeClock();
                     if (new Date().getSeconds() === 0) updateHomeGreeting();
                 }, 1000);
+            }
+            // v51：番茄钟后台恢复
+            loadPomodoroRuntime();
+            if (!window.__pomoV51Bound) {
+                window.__pomoV51Bound = true;
+                document.addEventListener('visibilitychange', function() {
+                    if (document.visibilityState === 'visible') recalcPomodoro();
+                });
+                window.addEventListener('pageshow', recalcPomodoro);
+                window.addEventListener('focus', recalcPomodoro);
             }
         }
 
