@@ -395,6 +395,16 @@
     </script>
     <title>个人工作台</title>
 
+    <!-- PWA：可添加到手机桌面，独立窗口打开 -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+    <link rel="apple-touch-icon" href="icons/icon-180.png">
+    <meta name="theme-color" content="#B8956A">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="成长工作台">
+
 <!-- v20预加载：首次访问直接注入7个真实账号+7条素材（帝王蝶+3D蝙蝠灯+宠物洗澡折叠凳每日新闻）+粉丝数据，仅在schema升级时强制覆盖一次 -->
 <script>
 (function() {
@@ -20196,5 +20206,16 @@ CREATE POLICY "allow_all" ON workbench_sync
         </div>
     </div>
 
+    <script>
+    /* PWA：注册 Service Worker（失败不影响页面功能，静默降级） */
+    (function () {
+        if (!('serviceWorker' in navigator)) return;
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('sw.js').catch(function (err) {
+                console.warn('[PWA] Service Worker 注册失败，页面功能不受影响:', err);
+            });
+        });
+    })();
+    </script>
 </body>
 </html>
