@@ -2,7 +2,7 @@
 
 个人媒体运营管理工具。
 
-GitHub Pages: https://qianshan797.github.io/qingqiu-media-workbench/
+GitHub Pages: https://qianshan797.github.io/personal-improving-workbench/
 
 ## 文件结构说明
 
