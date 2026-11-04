@@ -1,6 +1,6 @@
-# 新媒体运营工作台
+# 个人成长工作台
 
-个人媒体运营管理工具。
+个人成长与日常管理工具，涵盖任务、打卡、健康、学习进度与新媒体运营数据。
 
 GitHub Pages: https://qianshan797.github.io/personal-improving-workbench/
 
