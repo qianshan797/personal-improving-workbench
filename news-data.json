@@ -1,1 +1,1974 @@
-<FILE_CONTENT>
+[
+  {
+    "id": "news_20261104_001",
+    "date": "2026-11-04",
+    "category": "平台合规",
+    "title": "TikTok Shop 美区 11月1日起严控 AI 语音直播，挂机无真人出镜直接重罚",
+    "summary": "TikTok Shop 自 11月1日起依据《优质短视频与直播合规要求》对美区实施 AI 直播管控，全程 AI 语音直播和无真人出镜的 AI 挂机直播由通知整改改为直接处罚，卖家须调整直播间运营策略。",
+    "source": "https://m.sohu.com/a/1096657751_121810763/",
+    "tags": [
+      "TikTok Shop",
+      "AI直播",
+      "合规",
+      "美区",
+      "平台新规"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_002",
+    "date": "2026-11-04",
+    "category": "贸易政策",
+    "title": "欧盟 11月1日起对非欧盟远程销售货物按申报品项征收 2 欧元处理费",
+    "summary": "欧盟正式进入 ICS2 第二阶段，每个申报品项（同票同税则归类同原产）需缴 2 欧元处理费，叠加此前 3 欧元固定关税，对欧直邮小包每件综合税费升至约 5.42 欧元，合规风险由清关端转到寄件端。",
+    "source": "https://www.kjtong.com/news.html",
+    "tags": [
+      "欧盟",
+      "ICS2",
+      "关税",
+      "处理费",
+      "合规"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_003",
+    "date": "2026-11-04",
+    "category": "平台合规",
+    "title": "亚马逊 11月2日起上调商业责任险要求：多类目卖家无论销量强制留存保单",
+    "summary": "亚马逊 11月2日起实施新商业责任险要求，儿童用品、玩具、电池、ingestibles 等增强安全类目卖家无论月销售额是否超 1 万美元，均须维持每次及累计保额不低于 100 万美元的第三方责任险并上传保单。",
+    "source": "https://sellercentral.amazon.com/seller-forums/discussions/t/287d5c33-8278-4802-ba69-2f58f7dda408",
+    "tags": [
+      "亚马逊",
+      "商业责任险",
+      "安全合规",
+      "保额门槛",
+      "美国站"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_004",
+    "date": "2026-11-04",
+    "category": "平台动态",
+    "title": "亚马逊发布 2026 假日季退货政策：11月1日—12月31日订单可延至 2027 年1月31日前退回",
+    "summary": "亚马逊公布 2026 假日季退货期延长政策，11月1日至12月31日期间购买的商品可在 2027 年1月31日前退货，Apple 品牌商品另有期限，卖家需提前规划退货流程与海外仓库容。",
+    "source": "https://sellercentral.amazon.com/help/hub/reference/external/G201725760?locale=en-US",
+    "tags": [
+      "亚马逊",
+      "假日季",
+      "退货",
+      "FBA",
+      "黑五"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_005",
+    "date": "2026-11-04",
+    "category": "平台功能更新",
+    "title": "亚马逊 Seller Central 新增多渠道销售工具，打通 Amazon/Shopify/TikTok/Walmart",
+    "summary": "亚马逊在美国站逐步向卖家开放多渠道销售工作台，一站式同步 Amazon、Shopify、TikTok Shop、Walmart、eBay 的订单、Listing 与盈利数据，替代多套后台登录，首批 US 店卖家已灰度。",
+    "source": "https://www.aboutamazon.com/news/small-business/amazon-seller-central-multichannel-selling-tools",
+    "tags": [
+      "亚马逊",
+      "多渠道",
+      "Shopify",
+      "TikTok Shop",
+      "运营工具"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_006",
+    "date": "2026-11-04",
+    "category": "平台动态",
+    "title": "TikTok Shop 美区黑五促前冲刺自查清单发布：九项任务须在 11月12日大促前完成",
+    "summary": "TikTok Shop 官方发布美区黑五促前冲刺自查清单，涵盖货品入仓、素材产出、全托管价格设置、店铺诊断、达人邀约等九项硬任务，11月12日大促正式开跑前须全部闭环。",
+    "source": "https://www.tiktokshopglobalselling.com/zh-cn/newsroom",
+    "tags": [
+      "TikTok Shop",
+      "黑五",
+      "美区",
+      "全托管",
+      "促销"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_007",
+    "date": "2026-11-04",
+    "category": "平台动态",
+    "title": "亚马逊 MCF 对 TikTok Shop 订单推出 35% 配送折扣，期限 12 个月",
+    "summary": "亚马逊 Multichannel Fulfillment 宣布自 7月16日起，通过 MCF 为美国 TikTok Shop 订单提供 Standard/Expedited 配送费 35% 折扣，期限 12 个月，自动适用旺季峰值附加费除外。",
+    "source": "https://sellercentral.amazon.com/seller-forums/discussions/t/264206ca-5f0f-4e5a-9dce-72fa95b1ca30",
+    "tags": [
+      "亚马逊MCF",
+      "TikTok Shop",
+      "物流折扣",
+      "美区",
+      "旺季"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_008",
+    "date": "2026-11-04",
+    "category": "贸易政策",
+    "title": "海关总署发布 2026 第 78 号公告：出口管制物项识别加强，跨境电商申报清单须备注",
+    "summary": "海关总署第 78 号公告强化出口管制物项识别，特性接近或用途不符管制要求的非管制物项须在报关单、出境 C 类快件报关单和跨境电商零售出口申报清单备注\"不属于出口管制物项\"。",
+    "source": "https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2026/art_a87295324c5c46f1a8e05d332a11796a.html",
+    "tags": [
+      "海关总署",
+      "出口管制",
+      "报关",
+      "跨境电商",
+      "合规"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_009",
+    "date": "2026-11-04",
+    "category": "AI产品落地",
+    "title": "苹果智能 Beta 版开放测试，Siri 直连阿里千问文本+图像理解",
+    "summary": "11月4日凌晨苹果随 iOS 开发者 Beta 版开放 Apple Intelligence 测试，中国用户可在 Siri、写作工具与视觉智能中直接调用千问的文本与图像理解、内容生成能力，图文分析首次打通。",
+    "source": "https://news.qq.com/rain/a/20261104A03BNB00",
+    "tags": [
+      "苹果",
+      "Apple Intelligence",
+      "千问",
+      "Siri",
+      "Beta"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_010",
+    "date": "2026-11-04",
+    "category": "AI模型更新",
+    "title": "商汤日日新 SenseNova 6.8 Flash 正式版发布，支持动态 PPT 与 Blender 3D 设计",
+    "summary": "11月3日商汤发布日日新 SenseNova 6.8 Flash 正式版，重点升级办公协作与设计生成，支持长期记忆、跨会话任务协作，动态 PPT/海报/网页/SVG 及 Blender 3D 创作，可接入 Figma。",
+    "source": "http://m.163.com/dy/article/LASIVNF80534A4SC.html",
+    "tags": [
+      "商汤",
+      "SenseNova 6.8",
+      "办公AI",
+      "设计生成",
+      "3D"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_011",
+    "date": "2026-11-04",
+    "category": "AI模型更新",
+    "title": "Anthropic 更新 S-1：三季度营收 169.6 亿美元，同比暴增 1127%，IPO 在即",
+    "summary": "Anthropic 向 SEC 更新招股书，三季度营收 169.6 亿美元同比增 1127%，调整后营业利润 25 亿美元，但净亏损扩大至 233 亿美元，算力承诺支出高达 8954 亿美元，IPO 窗口临近。",
+    "source": "https://m.weibo.cn/detail/5361447095766575",
+    "tags": [
+      "Anthropic",
+      "IPO",
+      "Claude",
+      "营收",
+      "算力"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_012",
+    "date": "2026-11-04",
+    "category": "AI模型更新",
+    "title": "Google Gemini 4 Argon 全面开放，支持 100 万 token 统一上下文",
+    "summary": "Google Gemini 4 Argon 自 10月13日起正式一般公开，作为目前最强的推理模型在复杂编码、智能体、数学和科学任务中显著领先，统一 100 万 token 输入上下文，已通过 Gemini API 和 Google AI Studio 上线。",
+    "source": "https://ai.google.dev/gemini-api/docs/generate-content/latest-model?hl=zh-cn",
+    "tags": [
+      "Google",
+      "Gemini 4",
+      "Argon",
+      "推理模型",
+      "API"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_013",
+    "date": "2026-11-04",
+    "category": "AI行业动态",
+    "title": "蔡崇信：千问开源模型已超 470 款，全球累计下载破 40 亿，衍生模型 33 万",
+    "summary": "蔡崇信在云栖大会上强调\"只有开源才能推动 AI 普及\"，透露阿里千问已开源超 470 款模型，全球累计下载突破 40 亿，衍生模型超 33 万，正降低中小企业研发成本。",
+    "source": "http://m.163.com/dy/article/LASIVNF80534A4SC.html",
+    "tags": [
+      "阿里巴巴",
+      "千问",
+      "开源",
+      "蔡崇信",
+      "下载量"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_014",
+    "date": "2026-11-04",
+    "category": "AI行业动态",
+    "title": "OpenAI 推出 LifeVal 基准测试，衡量 AI 完成日常任务能力（托育/财务/政务）",
+    "summary": "OpenAI 于 11月2日发布 LifeVal 基准测试，聚焦 AI 在真实世界日常任务上的表现，涵盖寻找托育服务、管理财务、处理政务文书等事项，填补现有 AI 能力评估与人类实际使用之间的鸿沟。",
+    "source": "https://openai.com/zh-Hans-CN/research/index/",
+    "tags": [
+      "OpenAI",
+      "基准测试",
+      "LifeVal",
+      "AI评估",
+      "日常任务"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_015",
+    "date": "2026-11-04",
+    "category": "AI功能更新",
+    "title": "OpenAI 在 ChatGPT 上线互动记忆卡片，支持 AI 出题/上传笔记翻面练习",
+    "summary": "OpenAI 在 ChatGPT 中推出互动记忆卡片功能，可让 AI 为学习主题生成卡片或把用户上传的笔记转为卡片，支持翻面、✔️/❌标记、打乱顺序练习，卡片自动保存到资料库循环复习。",
+    "source": "https://help.openai.com/zh-hans-cn/articles/6825453-chatgpt-release-notes",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "记忆卡片",
+      "学习工具",
+      "功能更新"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261104_016",
+    "date": "2026-11-04",
+    "category": "AI行业动态",
+    "title": "11月 LLMJacking 威胁升温：企业云 AI 推理框被劫持倒卖，AgentCore 推代理认证方案",
+    "summary": "企业安全研究显示，一种名为 LLMJacking 的新攻击手法正窃取企业云端 AI 推理配额并转售，日本安全团队 eguweb 对 11月4日最新威胁做了完整分析，AgentCore 同步推出代理认证缓解方案。",
+    "source": "https://eguweb.jp/ai/81691/",
+    "tags": [
+      "AI安全",
+      "LLMJacking",
+      "AgentCore",
+      "推理配额",
+      "网络威胁"
+    ],
+    "read": false,
+    "createdAt": 1793752769542
+  },
+  {
+    "id": "news_20261103_001",
+    "date": "2026-11-03",
+    "category": "贸易政策",
+    "title": "欧盟 ICS2 第二阶段正式生效：B2C 包裹强制 PID 申报 + 海关处理费",
+    "summary": "2026年11月1日起欧盟正式进入 ICS2 第二阶段，所有发往欧盟的 B2C 包裹强制申报产品标识符（PID），同时引入 3 欧元固定关税 + 海关处理费，卖家需在 SKU 级提供 M-PID/ASIN 等信息。",
+    "source": "https://www.ccpitzj.gov.cn/col/col1229557691/art/2026/art_2191ab581d0e49cab49303cd53a3a491.html",
+    "tags": [
+      "欧盟",
+      "ICS2",
+      "PID",
+      "合规",
+      "关税"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_002",
+    "date": "2026-11-03",
+    "category": "平台合规",
+    "title": "Temu 与美国得州达成 300 万美元和解：数据须存美国境内",
+    "summary": "10月16日，Temu 就数据隐私诉讼与得州总检察长达成和解，支付 300 万美元罚金，并承诺得州用户数据存于美国服务器、每年合规检查，违规最高年罚 800 万美元。",
+    "source": "https://cifer.pbcsf.tsinghua.edu.cn/info/1161/3631.htm",
+    "tags": [
+      "Temu",
+      "美国",
+      "数据隐私",
+      "合规",
+      "诉讼"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_003",
+    "date": "2026-11-03",
+    "category": "平台动态",
+    "title": "TikTok Shop 美区黑五网一延长至 20 天，11月12日开跑",
+    "summary": "TikTok Shop 美区宣布 2026 黑五网一大促定档 11月12日-12月1日（20 天超长周期），亿级营销资源加持，推出超级单品、品类日、品牌盛典等玩法，面向长青爆品、秋冬应季和趋势热品。",
+    "source": "https://www.tiktokshopglobalselling.com/zh-cn/newsroom/detail/TTS_US_Blackfriday",
+    "tags": [
+      "TikTok Shop",
+      "黑五",
+      "美区",
+      "大促",
+      "爆品"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_004",
+    "date": "2026-11-03",
+    "category": "贸易政策",
+    "title": "宁波海关推出跨境电商出口 12 条：先查验后装运 效率提升 50%",
+    "summary": "宁波海关发布 2026 年促进跨境电商出口 12 条措施，推广综保区内先查验后装运模式，舟山港新增海运快线，累计 26 条海运快线中欧 26 天直达，物流周转效率提高 50% 以上。",
+    "source": "https://m.163.com/dy/article/LAQ11M4T0514R9KQ.html",
+    "tags": [
+      "宁波海关",
+      "物流",
+      "跨境出口",
+      "海运",
+      "监管"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_005",
+    "date": "2026-11-03",
+    "category": "平台合规",
+    "title": "海关总署 2026 第 24 号：跨境电商零售出口可跨关区退货",
+    "summary": "海关总署发布第 24 号公告，全面推广跨境电商零售出口（9610 模式）跨关区退货，退回商品仅允许退至开展跨境电商业务的监管作业场所，解决中小企业海外仓退货成本痛点。",
+    "source": "http://www.customs.gov.cn/customs/2026-03/13/article_2026031308581097137.html",
+    "tags": [
+      "海关总署",
+      "退货",
+      "9610",
+      "合规",
+      "政策"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_006",
+    "date": "2026-11-03",
+    "category": "平台功能更新",
+    "title": "TikTok Shop 开放 API 更新：新增 auction_support_type 字段控制拍卖商品",
+    "summary": "TikTok Shop 开发者 Changelog 10月更新，在 Promotion 域新增 auction_support_type 字段，允许卖家通过 OpenAPI 控制拍卖类商品在活动中的支持范围，美区黑五直播拍卖玩法可据此配置。",
+    "source": "https://partner.tiktokshop.com/docv2/changelog",
+    "tags": [
+      "TikTok Shop",
+      "API",
+      "拍卖",
+      "开发者",
+      "功能更新"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_007",
+    "date": "2026-11-03",
+    "category": "市场趋势",
+    "title": "亚马逊 TOP100 中国卖家占比仅 18.6%：金字塔尖本土卖家主导",
+    "summary": "亚马逊美国前 1 万名卖家中中国卖家占 55.9%，但拉到 TOP100 金字塔尖美国本土卖家占 81.4%，显示品牌溢价、合规能力与本地供应链仍是登顶关键。",
+    "source": "https://www.kjnote.cn/post",
+    "tags": [
+      "亚马逊",
+      "数据",
+      "中国卖家",
+      "市场趋势",
+      "品牌"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_008",
+    "date": "2026-11-03",
+    "category": "平台动态",
+    "title": "Shopee 服务市场全新升级，拉美站点佣金减免 + 营销补贴上线",
+    "summary": "Shopee 对服务市场进行全面升级，同时在拉美站点推出佣金减免与营销补贴组合激励，配合旺季爆单选品推荐，帮助跨境卖家以低门槛撬动拉美新增量。",
+    "source": "https://shopee.cn/news/8",
+    "tags": [
+      "Shopee",
+      "拉美",
+      "补贴",
+      "平台",
+      "新卖家"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_009",
+    "date": "2026-11-03",
+    "category": "AI模型更新",
+    "title": "OpenAI 下一代 GPT 曝光：GPT-6.2 Astra 跳过 6.1 安全回炉，自驱动 Codex 同步重做",
+    "summary": "2026年11月3日 36氪报道，原计划的 GPT-6.1 因安全测试翻车闭关重炼，直接跳级 GPT-6.2 Astra；OpenAI Codex 团队 28 天连夜重做底层，支持拉起子进程连续工作数小时。",
+    "source": "http://m.toutiao.com/group/7703367563765400099/",
+    "tags": [
+      "OpenAI",
+      "GPT-6.2",
+      "安全",
+      "Codex",
+      "模型发布"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_010",
+    "date": "2026-11-03",
+    "category": "AI模型更新",
+    "title": "Google 发布 Gemini 4 Argon（限时 $2/$10 API）与 Genie 4 世界模型",
+    "summary": "2026年10月27日 Google 发布 Gemini 4 Argon 推理模型（限时低价 API）、Gemini 4 Carbon 擅长长期任务与安全防御，以及 Genie 4 可生成 2 分钟带原生音轨的可交互世界。",
+    "source": "https://korecara-ai.com/google-ai-updates-october-2026-gemini4/",
+    "tags": [
+      "Google",
+      "Gemini 4",
+      "Genie 4",
+      "多模态",
+      "API"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_011",
+    "date": "2026-11-03",
+    "category": "AI模型更新",
+    "title": "月之暗面 Kimi K3.1 Pro 上线火山方舟，深度求索 DeepSeek-V4.1-Flash 同天发布",
+    "summary": "2026年10月24-27日，月之暗面 Kimi K3.1 Pro（企业级深度思考、Agent 编程）与 DeepSeek-V4.1-Flash（缓存输入低至 $0.003/1M）在火山方舟同步开服，双双主打长程智能体场景。",
+    "source": "https://docs.volcengine.com/docs/ark/model-release-announcement",
+    "tags": [
+      "Kimi K3.1",
+      "DeepSeek-V4.1",
+      "火山方舟",
+      "深度思考",
+      "Agent"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_012",
+    "date": "2026-11-03",
+    "category": "AI模型更新",
+    "title": "美团 LongCat 2.5 正式版 API 上线，原生多模态 + 长程任务强化",
+    "summary": "2026年11月3日，美团 LongCat 2.5 正式版 API 上线，为 Vercel AI Gateway 新增模型；原生多模态理解与长程任务拆解能力增强，面向电商与运营类 Agent 场景。",
+    "source": "https://korecara-ai.com/longcat-2-5-vercel-ai-gateway/",
+    "tags": [
+      "美团",
+      "LongCat 2.5",
+      "Vercel",
+      "多模态",
+      "Agent"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_013",
+    "date": "2026-11-03",
+    "category": "AI功能更新",
+    "title": "OpenAI 宣布 Sora 2 Pro Guest Starring 功能 + Android 客户端启动",
+    "summary": "OpenAI 对 Sora 视频生成器进行大版本更新，新增 Guest Starring 跨影片角色统一、更丰富的剪辑与社交工具；同时发布 Android 端，扩大移动端创作入口。",
+    "source": "https://ai-damn.com/sora-unveils-major-updates-guest-characters-android-launch-1761261340747",
+    "tags": [
+      "OpenAI",
+      "Sora",
+      "视频生成",
+      "Android",
+      "多模态"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_014",
+    "date": "2026-11-03",
+    "category": "AI功能更新",
+    "title": "Runway Gen-4.5 发布 + Runway 内接入 Kling 3.0 / Sora 2 Pro 多模型",
+    "summary": "Runway 推出 Gen-4.5 专注社交短视频生成，同时在编辑器内原生接入可灵 3.0、可灵 2.6 Pro、WAN2.2 Animate、GPT-Image-1.5、Sora 2 Pro 等多家视频模型，支持同场景多模型对比。",
+    "source": "https://runway.com/changelog",
+    "tags": [
+      "Runway",
+      "Gen-4.5",
+      "可灵",
+      "视频生成",
+      "多模型"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_015",
+    "date": "2026-11-03",
+    "category": "AI行业动态",
+    "title": "阿布扎比与 OpenAI 签署四项协议：政府/能源/投资分析智能体落地",
+    "summary": "2026年11月3日，阿布扎比与 OpenAI 签署四项合作，覆盖机器可读政府规则、能源业务、投资分析与区域推广；首个食品进口合规试点已投入生产运行，规则追溯到具体条款。",
+    "source": "https://m.weibo.cn/detail/5361085083553291",
+    "tags": [
+      "OpenAI",
+      "阿布扎比",
+      "政府",
+      "智能体",
+      "合作"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261103_016",
+    "date": "2026-11-03",
+    "category": "AI模型更新",
+    "title": "腾讯混元发布 Hyra 2.0：科研 Agent 可复用工具，优必选同步发布 Thinker-S",
+    "summary": "2026年11月3日腾讯混元 Hyra 2.0 面向科研智能体，支持工具描述与复用，降低科研 Agent 搭建门槛；同日优必选发布 Thinker-S 物理世界推理模型，面向机器人场景。",
+    "source": "https://m.weibo.cn/detail/5361085083553291",
+    "tags": [
+      "腾讯",
+      "混元",
+      "Hyra 2.0",
+      "科研Agent",
+      "机器人"
+    ],
+    "read": false,
+    "createdAt": 1793665952591,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_001",
+    "date": "2026-11-02",
+    "category": "贸易政策",
+    "title": "欧盟ICS2第二阶段11月1日生效：产品标识符PID强制申报+海关处理费",
+    "summary": "欧盟低值包裹政策第二阶段自11月1日起正式实施，所有B2C快件强制要求提供产品标识符PID（商家SKU/ASIN、制造商编号等），并引入欧盟海关处理费，合规压力陡增。",
+    "source": "https://trade.ec.europa.eu/access-to-markets/en/news/eu-applies-eu3-customs-duty-item-low-value-e-commerce-consignments",
+    "tags": [
+      "欧盟",
+      "ICS2",
+      "PID",
+      "合规",
+      "关税"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_002",
+    "date": "2026-11-02",
+    "category": "市场趋势",
+    "title": "黑五备货进入冲刺周 卖家提前入库应对欧盟新政后首个旺季",
+    "summary": "距11月27日黑五还有25天，受欧盟取消低值免税+PID强制合规影响，卖家提前将货运入海外仓，部分发货计划推迟到黑五后按需分批。",
+    "source": "https://news.qq.com/rain/a/20261101A09LWA00",
+    "tags": [
+      "黑五",
+      "旺季",
+      "海外仓",
+      "跨境物流",
+      "备货"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_003",
+    "date": "2026-11-02",
+    "category": "平台动态",
+    "title": "亚马逊FBA黑五入仓截止日已过 卖家紧盯履约时效",
+    "summary": "亚马逊黑五网一FBA入仓两个关键节点已过：10月21日为最小拆分选项截止日、10月28日为optimized拆分截止日，旺季订单履约压力骤升。",
+    "source": "http://m.toutiao.com/group/7701325486898676252/",
+    "tags": [
+      "亚马逊",
+      "FBA",
+      "黑五",
+      "入仓",
+      "履约"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_004",
+    "date": "2026-11-02",
+    "category": "平台功能更新",
+    "title": "TikTok Shop东南亚Q4飞轮计划：新店限时免佣+最高9000美元扶持",
+    "summary": "TikTok Shop东南亚推出2026飞轮计划Q4，10-12月新入驻店铺分市场限时免佣金或免交易手续费，设金额上限并可享最高9000美元激励。",
+    "source": "https://cj.sina.com.cn/articles/view/2650591473/9dfcd0f100102p76k",
+    "tags": [
+      "TikTok Shop",
+      "东南亚",
+      "Q4",
+      "免佣",
+      "新卖家"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_005",
+    "date": "2026-11-02",
+    "category": "平台合规",
+    "title": "TikTok Shop美国旺季运费调整：10月5日至2027年1月17日",
+    "summary": "TikTok Shop宣布因物流合作伙伴旺季调整，自美西时间10月5日起至2027年1月17日，TikTok Shipping平台物流服务适用旺季运费价卡。",
+    "source": "https://seller.tiktokglobalshop.com/university/essay?knowledge_id=8965511729891073",
+    "tags": [
+      "TikTok Shop",
+      "美国",
+      "运费",
+      "旺季",
+      "物流"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_006",
+    "date": "2026-11-02",
+    "category": "平台动态",
+    "title": "Shopee服务市场全新升级 附限时福利",
+    "summary": "Shopee宣布服务市场全新升级，赋能卖家生态共建，提供更多增值服务选择，同时推出限时福利活动助力卖家出海。",
+    "source": "https://shopee.cn/news/8/",
+    "tags": [
+      "Shopee",
+      "服务市场",
+      "卖家",
+      "生态",
+      "升级"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_007",
+    "date": "2026-11-02",
+    "category": "贸易政策",
+    "title": "跨境电商出口退运商品税收优惠政策延续至2027年底",
+    "summary": "财政部、海关总署、税务总局2026年第16号公告明确：2026-2027年跨境电商监管代码项下出口商品，6个月内原状退运免征进口关税和增值税。",
+    "source": "https://www.gov.cn/zhengce/zhengceku/202602/content_7057580.htm",
+    "tags": [
+      "税收",
+      "退运",
+      "政策",
+      "海关",
+      "优惠"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_008",
+    "date": "2026-11-02",
+    "category": "平台合规",
+    "title": "亚马逊欧洲站锂电池新规 未通过TIC认证商品将下架",
+    "summary": "亚马逊欧洲站锂电池新规9月30日已实施，未通过TIC认证的商品将被下架，卖家自配送商品安全违规有补救指南可参考。",
+    "source": "https://gs.amazon.cn/news",
+    "tags": [
+      "亚马逊",
+      "欧洲站",
+      "锂电池",
+      "合规",
+      "安全"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_009",
+    "date": "2026-11-02",
+    "category": "AI行业动态",
+    "title": "阿里千问集成Apple智能：中国用户Siri可直接调用千问能力",
+    "summary": "10月31日阿里巴巴与Apple达成合作，将千问集成至Apple智能，中国用户可在Siri、写作工具及视觉智能中调用千问图文生成能力，11月4日Beta测试。",
+    "source": "https://tech.cnr.cn/techph/20261031/t20261031_527858383.shtml",
+    "tags": [
+      "阿里巴巴",
+      "千问",
+      "Apple",
+      "Siri",
+      "合作"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_010",
+    "date": "2026-11-02",
+    "category": "AI模型更新",
+    "title": "OpenAI跳过6.1直接灰测GPT-6.2 Astra Codex后台已现踪迹",
+    "summary": "原计划的GPT-6.1因安全测试失败回炉重炼，闭关一个月后跳级6.2。新模型支持AI自主拉起子进程连续工作几小时，被曝已在Codex后台灰测。",
+    "source": "https://finance.sina.com.cn/wm/2026-11-02/doc-inixhwzc2372024.shtml",
+    "tags": [
+      "OpenAI",
+      "GPT-6.2",
+      "Astra",
+      "Codex",
+      "Agent"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_011",
+    "date": "2026-11-02",
+    "category": "AI模型更新",
+    "title": "Anthropic Claude Mythos 5.5源码曝光 与GPT-6.2同日撞车",
+    "summary": "OpenAI GPT-6.2 Astra爆料冲上热搜后，Anthropic官方源码里被扒出赫然躺着Claude Mythos 5.5，两大新旗舰同日曝光引发热议。",
+    "source": "https://36kr.com/p/4051806214214530",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "Mythos 5.5",
+      "大模型",
+      "Agent"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_012",
+    "date": "2026-11-02",
+    "category": "AI模型更新",
+    "title": "Google发布Gemini 4 Carbon 登顶全球大模型排行榜",
+    "summary": "Google DeepMind 10月发布Gemini 4 Carbon前沿模型，抢走OpenAI全球第一宝座，同日还发布世界模拟模型Genie 4和机器人专用模型Gemini 4 Argon。",
+    "source": "https://deepmind.google/models/",
+    "tags": [
+      "Google",
+      "Gemini 4",
+      "Carbon",
+      "DeepMind",
+      "前沿模型"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_013",
+    "date": "2026-11-02",
+    "category": "AI模型更新",
+    "title": "OpenAI GPT-6.1 Terra正式发布 API及ChatGPT工作/Codex已上线",
+    "summary": "10月26日OpenAI推出GPT-6.1 Terra，作为GPT-6系列最新模型，支持视觉推理、计算机操作和写作，快速高效且降低调用价格，已在API以gpt-6.1-terra名称发布。",
+    "source": "https://openai.com/zh-Hans-CN/products/release-notes/",
+    "tags": [
+      "OpenAI",
+      "GPT-6.1",
+      "Terra",
+      "API",
+      "多模态"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_014",
+    "date": "2026-11-02",
+    "category": "AI行业动态",
+    "title": "MiniMax M3.1 Flash开源 华为昇腾完成适配 1M上下文Coding旗舰",
+    "summary": "MiniMax开源M3.1 Flash模型，采用全新MSA注意力架构，支持1M超长上下文，华为云基于昇腾算力底座完成原生适配，3天可处理超100万亿Token。",
+    "source": "https://36kr.com/p/4038403667760257",
+    "tags": [
+      "MiniMax",
+      "M3.1",
+      "开源",
+      "华为昇腾",
+      "Coding"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_015",
+    "date": "2026-11-02",
+    "category": "AI功能更新",
+    "title": "腾讯发布BuddyOne 连接办公应用支持跨平台资料检索",
+    "summary": "腾讯发布BuddyOne智能助手，连接办公应用生态并支持跨平台资料检索，同传大模型推动实时语音服务落地企业办公场景。",
+    "source": "https://news.qq.com/rain/a/20261102A035M000",
+    "tags": [
+      "腾讯",
+      "BuddyOne",
+      "办公",
+      "企业AI",
+      "语音"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261102_016",
+    "date": "2026-11-02",
+    "category": "AI功能更新",
+    "title": "可灵开放Kling 4.0 API 视频生成融入创作工具与企业工作流",
+    "summary": "快手可灵宣布开放Kling 4.0 API接口，促进AI视频生成能力融入各类创作工具和企业级工作流，开发者可接入实现视频自动化生产。",
+    "source": "https://news.qq.com/rain/a/20261102A035M000",
+    "tags": [
+      "可灵",
+      "Kling 4.0",
+      "API",
+      "视频生成",
+      "快手"
+    ],
+    "read": false,
+    "createdAt": 1793579613375,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_001",
+    "date": "2026-10-30",
+    "category": "平台动态",
+    "title": "亚马逊2026Q3财报：AWS营收增39.3%，自由现金流转负424亿美元，盘后跌超11%",
+    "summary": "亚马逊2026财年Q3营收2019亿美元同比增12%，AWS营收460亿美元增39.3%创近五年最快；AI资本开支772.6亿美元、自由现金流-424亿美元，Q4指引偏弱，盘后股价一度跌超11%。",
+    "source": "https://finance.sina.com.cn/jjxw/2026-10-30/doc-iniwxzqi4867638.shtml",
+    "tags": [
+      "亚马逊",
+      "AWS",
+      "Q3财报",
+      "AI资本开支",
+      "旺季"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_002",
+    "date": "2026-10-30",
+    "category": "贸易政策",
+    "title": "美国拟要求低值进口放行前缴保证金（单笔下限100→1000美元），T86免税终止后小包成本抬升",
+    "summary": "美国拟将低值进口保证金单笔下限由100美元提至1000美元，申报前置至进口当天；T86免税作废后，800美元以下直发小包按单件最低25美元或货值30%从高征税，直发卖家利润承压。",
+    "source": "https://www.yunlogin.com/news/6052",
+    "tags": [
+      "美国关税",
+      "保证金",
+      "T86",
+      "直发小包",
+      "合规"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_003",
+    "date": "2026-10-30",
+    "category": "平台动态",
+    "title": "黑五备战进入最后窗口：亚马逊促销提报10月20日截止、TikTok Shop全托管10月27日封板、Temu 11月2日开卖",
+    "summary": "四川省商务厅外贸动态显示，亚马逊美国站促销提报10月20日截止、FBA最小货件拆分入仓10月21日截止；TikTok Shop全托管黑五上架硬截止10月27日；Temu正式期11月2日至26日。",
+    "source": "https://swt.sc.gov.cn/sccom/c25030603/2026/10/21/7ee6b99a531d453391eb95a03e9dcdc6.shtml",
+    "tags": [
+      "黑五",
+      "亚马逊",
+      "TikTok Shop",
+      "Temu",
+      "入仓截止"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_004",
+    "date": "2026-10-30",
+    "category": "贸易政策",
+    "title": "旺季海运运价走高：盐田—洛杉矶40尺高柜报价逼近15000美元，较半年前翻倍",
+    "summary": "10月旺季美线运价走高，盐田—洛杉矶长滩40尺高柜快船报价由节前约12000美元涨至逼近15000美元，较半年前翻倍；整柜与中小铺货、轻小件卖家同时承受尾程附加费上涨。",
+    "source": "https://m.amz123.com/t/iX7OQt1z",
+    "tags": [
+      "海运运价",
+      "美线",
+      "旺季物流",
+      "履约成本"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_005",
+    "date": "2026-10-30",
+    "category": "平台合规",
+    "title": "欧盟PPWR落地：电商包裹空隙率不得超过50%，违者面临处罚",
+    "summary": "欧盟包装与包装废弃物法规（PPWR）进入执行阶段，要求电商包裹内部空隙率不超过50%，过度包装将面临处罚；卖家需调整包装尺寸与装箱方案，否则入欧合规与物流成本同步上升。",
+    "source": "https://aitosea.ai/daily-reports",
+    "tags": [
+      "欧盟",
+      "PPWR",
+      "包装合规",
+      "绿色壁垒"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_006",
+    "date": "2026-10-30",
+    "category": "贸易政策",
+    "title": "商务部等四部门发文：16项措施提高海南自贸港贸易自由化便利化水平",
+    "summary": "10月29日商务部会同发改委、生态环境部、海关总署印发通知，围绕货物贸易优化升级、服务贸易自由便利、贸易新业态创新提出16项措施，重点支持汽车、石化新材料及跨境电商。",
+    "source": "http://m.toutiao.com/group/7702251309746897443/",
+    "tags": [
+      "海南自贸港",
+      "贸易便利化",
+      "跨境电商",
+      "政策"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_007",
+    "date": "2026-10-30",
+    "category": "平台动态",
+    "title": "速卖通海外双11于10月29日开启预热，“两波连击”衔接黑五网一",
+    "summary": "速卖通2026年度峰会公布排期：海外双11于10月29—31日预热、11月1—18日正式售卖；黑五网一11月19日至12月3日接续，中间不停，形成约五周连续促销窗口，卖家需提前锁定海外仓库存。",
+    "source": "http://m.toutiao.com/group/7701325486898676252/",
+    "tags": [
+      "速卖通",
+      "海外双11",
+      "黑五网一",
+      "大促排期"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_008",
+    "date": "2026-10-30",
+    "category": "平台功能更新",
+    "title": "TikTok Shop英国站上线直播团购与可购物图片轮播",
+    "summary": "TikTok Shop为英国卖家上线一批新功能：无需录制视频即可创建可购物图片轮播，上传两张以上商品图并关联商品即可发布；直播侧新增团购与降价机制，卖家设定集体购买目标，达标后所有参与者同享折扣价。",
+    "source": "https://www.chwang.com/tiktokshop/news",
+    "tags": [
+      "TikTok Shop",
+      "英国站",
+      "直播团购",
+      "图片轮播",
+      "新功能"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_009",
+    "date": "2026-10-30",
+    "category": "AI模型更新",
+    "title": "OpenAI发布GPT-6.1 Terra：主打视觉推理与计算机操作，已上线ChatGPT工作、Codex与API",
+    "summary": "OpenAI于10月26日发布GPT-6.1 Terra，支持视觉推理、计算机操作与写作，正在ChatGPT工作与Codex逐步推出，并已以gpt-6.1-terra在API上线。",
+    "source": "https://openai.com/zh-Hans-CN/products/release-notes/",
+    "tags": [
+      "OpenAI",
+      "GPT-6.1 Terra",
+      "计算机操作",
+      "API",
+      "多模态"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_010",
+    "date": "2026-10-30",
+    "category": "AI行业动态",
+    "title": "Anthropic递交S-1启动IPO：代码ANT拟登纳斯达克，估值预期1.5万—2万亿美元",
+    "summary": "当地时间10月26日Anthropic向SEC递交S-1，计划以“ANT”登陆纳斯达克，据报拟11月16日当周上市；招股书显示上半年收入162.9亿美元、Q2经营利润率首次转正至8%。",
+    "source": "https://www.anthropic.com/news",
+    "tags": [
+      "Anthropic",
+      "IPO",
+      "Claude",
+      "大模型商业化"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_011",
+    "date": "2026-10-30",
+    "category": "AI功能更新",
+    "title": "Gemini上线聊天内文件生成与编辑：PDF、Docs、Sheets、Markdown可直接改",
+    "summary": "10月30日据报道，谷歌为Gemini新增文件预览与编辑功能，可在聊天内直接生成、查看、修改PDF、Google Docs、Sheets、幻灯片、Markdown及代码文件，面向所有用户开放。",
+    "source": "https://original.ifeng.com/c/8xdNzqURAr3",
+    "tags": [
+      "Google",
+      "Gemini",
+      "文档编辑",
+      "办公",
+      "多模态"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_012",
+    "date": "2026-10-30",
+    "category": "AI功能更新",
+    "title": "腾讯发布Buddy One个人AI办公套件，混元HY4与HY4 Flash即将推出",
+    "summary": "10月29日腾讯发布跨应用AI办公套件Buddy One，打通腾讯文档、会议、网盘与ima，共享WorkBuddy Agent底座，并预告混元HY4与HY4 Flash即将推出。",
+    "source": "https://m.jiemian.com/article/15265476.html",
+    "tags": [
+      "腾讯",
+      "混元HY4",
+      "Buddy One",
+      "Agent",
+      "AI办公"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_013",
+    "date": "2026-10-30",
+    "category": "AI模型更新",
+    "title": "智元发布物理AI度量单位Worken，同步上新具身基座模型GO-3 Preview与WITA-Omni 1.0",
+    "summary": "10月29日智元创新日上，智元发布物理AI价值度量衡Worken（有效智能工时），用于衡量机器人自主作业产出；同步推出具身基座模型GO-3 Preview与交互大模型WITA-Omni 1.0。",
+    "source": "https://news.qq.com/rain/a/20261030A032TF00",
+    "tags": [
+      "智元",
+      "具身智能",
+      "Worken",
+      "GO-3 Preview",
+      "机器人"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_014",
+    "date": "2026-10-30",
+    "category": "AI行业动态",
+    "title": "Cohere完成新一轮融资：加拿大政府与英伟达参与，投后估值超200亿美元",
+    "summary": "10月29日消息，加拿大政府与英伟达参与Cohere本轮融资，投后估值超过200亿美元，其中加拿大政府计划投资至多11.4亿美元，主权资本正加速入场企业级大模型赛道。",
+    "source": "http://m.toutiao.com/group/7702234806108586559/",
+    "tags": [
+      "Cohere",
+      "融资",
+      "英伟达",
+      "估值",
+      "主权资本"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_015",
+    "date": "2026-10-30",
+    "category": "AI行业动态",
+    "title": "亚马逊推出五款新一代Alexa设备，覆盖智能音箱、智能闹钟与智能显示屏",
+    "summary": "10月29日亚马逊发布五款新一代Alexa设备，涵盖智能音箱、智能闹钟及智能显示屏，把AI助手能力进一步下沉到家庭终端；与同日财报中AWS资本开支高企形成对照，AI硬件与终端正成为大厂新的落地战场。",
+    "source": "https://m.jiemian.com/article/15265476.html",
+    "tags": [
+      "亚马逊",
+      "Alexa",
+      "AI硬件",
+      "智能终端"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261030_016",
+    "date": "2026-10-30",
+    "category": "AI模型更新",
+    "title": "月之暗面发布Kimi K3.1 Pro Highspeed：输出速度提升2—3倍",
+    "summary": "月之暗面于10月23日推出Kimi K3.1 Pro Highspeed，官方称能力与K3.1 Pro一致但输出速度快2—3倍；Kimi Code需开启思考模式并使用更高等级会员，消耗约2倍额度。",
+    "source": "https://chinaapi.ai/model-updates/",
+    "tags": [
+      "月之暗面",
+      "Kimi K3.1",
+      "推理加速",
+      "国产大模型"
+    ],
+    "read": false,
+    "createdAt": 1793320465351,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_001",
+    "date": "2026-10-29",
+    "category": "贸易政策",
+    "title": "欧盟11月1日起每件中国包裹加收2欧元联盟处理费，中国卖家忙拆合调整",
+    "summary": "继7月1日150欧元以下小包被收回免税身份并加征3欧元关税后，欧盟将于11月1日起再叠加每件2欧元联盟处理费。中国卖家普遍将小包合并为大包发货，调整通关模式。",
+    "source": "http://m.toutiao.com/group/7701848780252971547/",
+    "tags": [
+      "欧盟关税",
+      "联盟处理费",
+      "小包合并",
+      "贸易政策",
+      "跨境合规"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_002",
+    "date": "2026-10-29",
+    "category": "平台动态",
+    "title": "亚马逊上线2.5亿条外部商品链接，Shop Direct计划防范AI购物代理分流",
+    "summary": "亚马逊正加大Shop Direct计划推进力度，目前已有2.5亿条商品链接至其他销售渠道，较3月时增长2.5倍。该计划旨在减少消费者转向能跨零售商采购的AI工具。",
+    "source": "http://m.toutiao.com/group/7701866261860385318/",
+    "tags": [
+      "亚马逊",
+      "Shop Direct",
+      "AI购物代理",
+      "平台策略",
+      "外部链接"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_003",
+    "date": "2026-10-29",
+    "category": "平台动态",
+    "title": "TikTok Shop美国BFCM定档11月11日-30日，20天超长档期覆盖黑五网一",
+    "summary": "TikTok Shop正式官宣2026美国黑五网一大促档期为11月11日至11月30日，全托管黑五大促季首次覆盖16个站点，9月#holidayshopping标签内容环比增长263%。",
+    "source": "https://www.amz123.com/Fth896QC",
+    "tags": [
+      "TikTok Shop",
+      "黑五网一",
+      "BFCM",
+      "全托管",
+      "美国站"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_004",
+    "date": "2026-10-29",
+    "category": "平台合规",
+    "title": "欧盟11月1日起强制申报商品识别码，低值包裹合规再加码",
+    "summary": "欧盟将于11月1日起要求跨境卖家对所有商品强制申报商品识别码，配合此前150欧元以下关税政策的调整，整体合规压力持续加码，卖家需梳理申报流程。",
+    "source": "https://www.ebrun.com/data/finance",
+    "tags": [
+      "欧盟",
+      "商品识别码",
+      "强制申报",
+      "跨境合规",
+      "低值包裹"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_005",
+    "date": "2026-10-29",
+    "category": "贸易政策",
+    "title": "法国《反超快时尚法》推进立法，Shein/Temu/AliExpress每件缴费0.25欧元",
+    "summary": "法国参议院通过《反超快时尚法》，监管目标直指Shein、Temu、AliExpress等中国跨境平台。法案规定超快时尚企业每件商品面临0.25欧元强制缴费，后续或扩展至全欧盟。",
+    "source": "http://www.chinanews.com.cn/cj/2026/08-07/10673390.shtml",
+    "tags": [
+      "法国",
+      "反超快时尚法",
+      "Shein",
+      "Temu",
+      "平台监管"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_006",
+    "date": "2026-10-29",
+    "category": "贸易政策",
+    "title": "越南新版海关法2027年3月生效，跨境电商需提前完善电子申报体系",
+    "summary": "越南第11/2026/QH16号海关法已于8月23日通过，将于2027年3月1日正式生效。新法覆盖电子海关、跨境电商交易全流程，企业需提前搭建合规申报体系。",
+    "source": "https://yddjp.com/news/",
+    "tags": [
+      "越南",
+      "海关法",
+      "电子申报",
+      "跨境合规",
+      "东南亚"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_007",
+    "date": "2026-10-29",
+    "category": "平台合规",
+    "title": "抖音加大对恶意营销号滥用AI的打击力度，电商内容生态持续治理",
+    "summary": "抖音宣布将持续加大对恶意营销号滥用AI生成内容的打击力度，AI短剧、AI直播与AI带货内容成为重点审查对象，平台合规治理进入深水区。",
+    "source": "https://www.ebrun.com/wap/c1.html",
+    "tags": [
+      "抖音",
+      "AI滥用",
+      "内容治理",
+      "平台合规",
+      "电商生态"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_008",
+    "date": "2026-10-29",
+    "category": "AI模型更新",
+    "title": "OpenAI 正式发布 GPT-6.1 Terra：快速高效，支持视觉推理与精准Computer Use",
+    "summary": "2026年10月26日，OpenAI发布GPT-6.1 Terra模型（API名gpt-6.1-terra），主打快速高效，擅长视觉推理、精准Computer Use与自然写作，已上线Plus/Pro/Business/Enterprise/Edu计划及Codex。",
+    "source": "https://openai.com/zh-Hans-CN/news/company-announcements/",
+    "tags": [
+      "OpenAI",
+      "GPT-6.1 Terra",
+      "模型发布",
+      "Computer Use",
+      "视觉推理"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_009",
+    "date": "2026-10-29",
+    "category": "AI模型更新",
+    "title": "Google DeepMind 发布 Gemini 4 Carbon，Intelligence Index 评分59登顶超越 Opus 5.5",
+    "summary": "2026年10月28日，谷歌发布新一代旗舰模型Gemini 4 Carbon，在Artificial Analysis Intelligence Index v5.0中以59分位居榜首，高于Claude Opus 5.5的58分，升级重点为长程编程与网络安全。",
+    "source": "http://m.toutiao.com/group/7701874719947932175/",
+    "tags": [
+      "Google",
+      "Gemini 4 Carbon",
+      "模型发布",
+      "Intelligence Index",
+      "长程编程"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_010",
+    "date": "2026-10-29",
+    "category": "AI行业动态",
+    "title": "Anthropic 递交 IPO 招股书，次日披露 Claude 收购 AI 制药公司 Mithril Medicine",
+    "summary": "2026年10月27日，Anthropic递交IPO招股书，同日披露Claude在AI制药领域取得进展并收购Mithril Medicine。此前一周OpenAI收购Orchestra Bio，AI制药赛道热度持续攀升、产能翻10倍。",
+    "source": "https://m.weibo.cn/detail/5359269525586242",
+    "tags": [
+      "Anthropic",
+      "IPO",
+      "Claude",
+      "AI制药",
+      "并购"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_011",
+    "date": "2026-10-29",
+    "category": "AI功能更新",
+    "title": "Google 发布 Genie 4 世界模型：实时交互模拟 + 原生音频生成，融合 Gemini 能力",
+    "summary": "谷歌发布新一代世界模型Genie 4，支持通过自然语言实时调整场景、天气与角色，融合Gemini系列能力。目前向部分受信任测试者开放，未来将面向Google AI Ultra订阅用户及Gemini API开发者。",
+    "source": "https://m.sohu.com/a/1094170247_313745/",
+    "tags": [
+      "Google",
+      "Genie 4",
+      "世界模型",
+      "音频生成",
+      "Gemini"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_012",
+    "date": "2026-10-29",
+    "category": "AI模型更新",
+    "title": "DeepSeek 开放自研搜索 API：替换旧 search 模型，统一网页端与 API 端底层",
+    "summary": "2026年10月17日更新，DeepSeek宣布开放自研搜索引擎API，替换旧的deepseek-search模型，统一网页端与API端的搜索底层，可稳定处理全球数亿次每日搜索请求。",
+    "source": "https://api-docs.deepseek.com/zh-cn/updates/",
+    "tags": [
+      "DeepSeek",
+      "搜索API",
+      "自研引擎",
+      "模型更新",
+      "底层统一"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_013",
+    "date": "2026-10-29",
+    "category": "AI行业动态",
+    "title": "字节AI应用整合：剪映小云雀并入即梦，打通AI短剧与视频创作能力",
+    "summary": "字节跳动内部完成AI业务整合：剪映旗下AI短剧创作平台小云雀并入智能创作平台即梦，仍保留独立产品入口，由即梦运营负责人陈欣然统一管理，打通AI视频创作与短剧制作能力。",
+    "source": "https://www.doit.com.cn/newsflash/",
+    "tags": [
+      "字节跳动",
+      "即梦",
+      "小云雀",
+      "AI短剧",
+      "业务整合"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_014",
+    "date": "2026-10-29",
+    "category": "AI行业动态",
+    "title": "国内AI Token消耗55%烧在短剧/视频生成，研发仅占15%",
+    "summary": "中文在线披露投资者关系活动数据：国内AI Token消耗55%烧在短剧与视频生成，24%烧在电商广告，真正用于研发的仅占15%。AI短剧Token消耗量已达软件开发的两倍以上。",
+    "source": "https://www.sina.cn/media/5777227559",
+    "tags": [
+      "AI Token",
+      "消耗结构",
+      "短剧",
+      "电商广告",
+      "行业洞察"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261029_015",
+    "date": "2026-10-29",
+    "category": "AI功能更新",
+    "title": "Anthropic Claude Security 新增持续代码扫描与修复追踪，Enterprise 企业版开启公共Beta",
+    "summary": "Anthropic 为 Claude Security 推出持续代码扫描功能，可追踪代码变更、标记已修复项、对复发问题重新打开，目前对 Claude Enterprise 企业级客户开放公共Beta测试。",
+    "source": "https://www.testingcatalog.com/",
+    "tags": [
+      "Anthropic",
+      "Claude Security",
+      "代码扫描",
+      "Enterprise",
+      "安全功能"
+    ],
+    "read": false,
+    "createdAt": 1793233992315,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_001",
+    "date": "2026-10-28",
+    "category": "平台动态",
+    "title": "亚马逊黑五网一FBA入仓今日截止，多数卖家卡在Amazon-optimized拆分节点",
+    "summary": "亚马逊黑五网一FBA入仓进入最后窗口：10月21日为最小拆分截止日，10月28日为多数卖家使用的Amazon-optimized拆分选项截止日。未按期入仓将错过黑五排期，须确认头程舱位与拆分策略。",
+    "source": "http://m.toutiao.com/group/7701325486898676252/",
+    "tags": [
+      "亚马逊",
+      "黑五",
+      "FBA入仓",
+      "旺季备货",
+      "头程物流"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_002",
+    "date": "2026-10-28",
+    "category": "平台合规",
+    "title": "亚马逊商业责任险新规11月2日生效：加强安全类目商品保额门槛升至100万美元",
+    "summary": "亚马逊11月2日起实施新商业责任险要求：增强安全类目商品无论月销售额是否超1万美元，均须维持每次事故及累计保额不低于100万美元的第三方责任险，新老Listing均适用，需上传保单凭证。",
+    "source": "https://sellercentral.amazon.com/seller-forums/discussions/t/287d5c33-8278-4802-ba69-2f58f7dda408",
+    "tags": [
+      "亚马逊",
+      "商业责任险",
+      "平台合规",
+      "保额门槛",
+      "美国站"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_003",
+    "date": "2026-10-28",
+    "category": "平台动态",
+    "title": "TikTok Shop全托管黑五商品上架10月27日硬截止，16个站点首次参战",
+    "summary": "TikTok Shop全托管黑五季首次覆盖16个站点，欧洲8个新兴站点首次参战。商家须在10月27日前完成商品上架，逾期无缘本期活动；美区跨境POP需10月31日前提报，全托管需月底完成九成品入仓。",
+    "source": "https://www.tiktokshopglobalselling.com/zh-cn/newsroom/detail/tiktokshop_FS_bfcm",
+    "tags": [
+      "TikTok Shop",
+      "全托管",
+      "黑五",
+      "上架截止",
+      "16国"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_004",
+    "date": "2026-10-28",
+    "category": "平台动态",
+    "title": "Shopee巴西黑五启动：投入2300万雷亚尔优惠券并新建4个配送中心",
+    "summary": "Shopee于10月27日宣布巴西大促方案：投入2300万雷亚尔用于黑五优惠券、另2500万雷亚尔投向11.11，并新启用4个配送中心，订单处理能力提升60%。黑五10月28日开启，最高折扣50%。",
+    "source": "https://sbtnews.sbt.com.br/noticia/economia/shopee-abre-4-centros-de-distribuicao-e-prepara-black-friday",
+    "tags": [
+      "Shopee",
+      "巴西站",
+      "黑五",
+      "物流履约",
+      "优惠券"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_005",
+    "date": "2026-10-28",
+    "category": "平台功能更新",
+    "title": "TikTok Shop更新Order API：新增LIVE场次ID与买家昵称字段",
+    "summary": "TikTok Shop于10月22日更新Partner Center订单API，美欧英日等市场新增LIVE场次ID与买家昵称字段，并上线订单标签及LIVE新API，商家可据此做直播归因分析。",
+    "source": "https://partner.tiktokshop.com/docv2/changelog",
+    "tags": [
+      "TikTok Shop",
+      "API更新",
+      "直播电商",
+      "订单数据",
+      "功能更新"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_006",
+    "date": "2026-10-28",
+    "category": "贸易政策",
+    "title": "美国CBP将国际邮政新申报流程强制日推迟90天至2027年1月20日",
+    "summary": "美国海关10月14日宣布，将国际邮件Entry Type 13新申报流程强制日期由2026年10月22日延后至2027年1月20日，为进口商、报关代理与物流商留出过渡期，邮政渠道免税同步暂停。",
+    "source": "https://www.govinfo.gov/content/pkg/FR-2026-10-22/html/2026-21600.htm",
+    "tags": [
+      "美国海关",
+      "CBP",
+      "邮政小包",
+      "免税",
+      "申报合规"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_007",
+    "date": "2026-10-28",
+    "category": "市场趋势",
+    "title": "跨太平洋航线旺季高位运行：上海至洛杉矶运价涨至8007美元/FEU",
+    "summary": "跨太平洋航线旺季高位运行，上海至洛杉矶运价涨2%至8007美元/FEU，上海至纽约达10166美元/FEU；美国9月集装箱进口255万TEU、同比增10%。舱位锁定与订舱提前期成四季度最大成本变量。",
+    "source": "https://finance.sina.com.cn/wm/2026-10-26/doc-iniwqpfh2383569.shtml.md",
+    "tags": [
+      "海运费",
+      "美线",
+      "舱位",
+      "FBA头程",
+      "旺季"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_008",
+    "date": "2026-10-28",
+    "category": "市场趋势",
+    "title": "中国造AI爆款出海：AI眼镜、AI陪伴机器人订单已排产到明年",
+    "summary": "央视报道，四季度跨境旺季中消费电子与AI智能硬件为增速最快的出海品类，AI眼镜、AI陪伴机器人在海外快速起量，部分订单已排产至明年；海运费上涨与舱位紧张同步推高履约成本。",
+    "source": "http://m.toutiao.com/group/7701496791522460169/",
+    "tags": [
+      "AI眼镜",
+      "出海爆款",
+      "智能硬件",
+      "旺季选品",
+      "订单排产"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_009",
+    "date": "2026-10-28",
+    "category": "AI模型更新",
+    "title": "Google DeepMind发布Genie 4世界模型：实时生成可交互世界并同步音频",
+    "summary": "谷歌DeepMind于10月27日发布世界模型Genie 4研究预览版，可用自然语言提示实时生成并修改可交互虚拟环境并同步生成音频，单段模拟由一分钟延长至约两分钟，定位影视预演与机器人训练。",
+    "source": "https://www.theverge.com/tech/1019076/google-genie-4-ai-model",
+    "tags": [
+      "Google DeepMind",
+      "Genie 4",
+      "世界模型",
+      "实时生成",
+      "多模态"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_010",
+    "date": "2026-10-28",
+    "category": "AI模型更新",
+    "title": "Liquid AI开源LFM3：一个骨干通吃文本、视觉、音频与决策全模态",
+    "summary": "Liquid AI开源LFM3基础模型，六款模型由LFM3-1.7B-Base微调，预训练耗费22T tokens，采用tri-hybrid混合架构，效果超上代且参数少35%，量化后可在手机本地跑。",
+    "source": "https://www.liquid.ai/blog/lfm3",
+    "tags": [
+      "Liquid AI",
+      "LFM3",
+      "开源模型",
+      "全模态",
+      "端侧部署"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_011",
+    "date": "2026-10-28",
+    "category": "AI模型更新",
+    "title": "科大讯飞星火X2.6发布：纯国产算力端云一体，端侧智能体完成率升至41.9%",
+    "summary": "科大讯飞10月28日发布星火X2.6，采用云端大模型加4B端侧模型的端云一体架构，长程任务动态并行使超长上下文训练效率提升约4倍，端侧智能体任务完成率由约12%升至41.9%。",
+    "source": "https://www.aibase.com/zh/news/31906",
+    "tags": [
+      "科大讯飞",
+      "星火X2.6",
+      "端云一体",
+      "智能体",
+      "国产算力"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_012",
+    "date": "2026-10-28",
+    "category": "AI功能更新",
+    "title": "字节即梦AI上线「短剧工作室」：三大自研模型打通短剧全流程创作",
+    "summary": "10月26日字节跳动旗下即梦AI上线短剧工作室，配套自研剧本模型DreamScript、图片模型Anycook与分镜模型DreamShot，覆盖剧本、分镜、视频制作与后期调整，打通短剧AIGC全流程。",
+    "source": "https://www.jiemian.com/article/15239885.html",
+    "tags": [
+      "即梦AI",
+      "短剧工作室",
+      "DreamScript",
+      "AIGC",
+      "字节跳动"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_013",
+    "date": "2026-10-28",
+    "category": "AI功能更新",
+    "title": "MOSS-Image开源生图模型登顶HuggingFace趋势榜，主攻密集文字与JSON布局控制",
+    "summary": "模思智能与OpenMOSS团队开源的MOSS-Image登顶Hugging Face生图趋势榜，GitHub收获1.4k stars，主打密集文字渲染与JSON Layout构图控制，适合海报电商图。",
+    "source": "https://www.qbitai.com/2026/10/504930.html",
+    "tags": [
+      "MOSS-Image",
+      "开源生图",
+      "HuggingFace",
+      "电商素材",
+      "排版控制"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_014",
+    "date": "2026-10-28",
+    "category": "AI行业动态",
+    "title": "OpenAI公布前沿模型断网训练安全政策：搭建离线世界应对Agent越界风险",
+    "summary": "OpenAI公布前沿模型训练安全政策，将训练环境从公网剥离：缓存网页搭出离线世界，模型只能在缓存内容中检索，外加沙箱与网络访问限制。政策源于今年多起Agent越界事故。",
+    "source": "https://www.qbitai.com/2026/10/505529.html",
+    "tags": [
+      "OpenAI",
+      "AI安全",
+      "智能体",
+      "沙箱",
+      "红队测试"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_015",
+    "date": "2026-10-28",
+    "category": "AI行业动态",
+    "title": "Anthropic递交S-1招股书启动纳斯达克IPO，或成史上最大科技IPO",
+    "summary": "10月26日晚Anthropic向美国SEC提交S-1，拟以代码ANT在纳斯达克上市，最早11月中旬挂牌。上半年收入达162.9亿美元、同比增约1300%，市场估值预期1.5万亿至2万亿美元。",
+    "source": "https://m.36kr.com/p/4042929382872200",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "IPO",
+      "S-1",
+      "AI估值"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261028_016",
+    "date": "2026-10-28",
+    "category": "AI行业动态",
+    "title": "英伟达30亿美元入股Meta并扩大Muse系列模型合作，加码AI算力集群",
+    "summary": "10月27日英伟达宣布向Meta投资30亿美元认购其新股，双方扩大在AI助手Muse及系列模型上的合作。Meta将扩大英伟达Vera Rubin算力集群部署，提升AI负载效率并降低总拥有成本。",
+    "source": "http://m.toutiao.com/group/7701505664073433651/",
+    "tags": [
+      "英伟达",
+      "Meta",
+      "Muse模型",
+      "算力投资",
+      "AI智能体"
+    ],
+    "read": false,
+    "createdAt": 1793147793025,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_001",
+    "date": "2026-10-27",
+    "category": "平台动态",
+    "title": "TikTok Shop美区黑五网一定档11月12日至12月1日，商家报名正式开启",
+    "summary": "TikTok Shop跨境电商官方宣布2026年美区黑五网一大促时间为11月12日至12月1日，商家报名已开启。平台建议POP卖家在10月31日前完成商品提报，全托管商家需在10月底完成美国站点九成货品入仓备货，同时加速图文与短视频素材产出。",
+    "source": "https://www.tiktokshopglobalselling.com/zh-cn/newsroom",
+    "tags": [
+      "TikTok Shop",
+      "黑五",
+      "跨境电商",
+      "大促",
+      "美区"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_002",
+    "date": "2026-10-27",
+    "category": "平台功能更新",
+    "title": "TikTok Shop美区跨境POP上线「直播砍价」与「直播拼团」两大新功能",
+    "summary": "TikTok Shop面向美区跨境POP优质商家推出LIVE Price Cut砍价与LIVE Group Deal拼团功能。砍价由用户互动推动价格下降，拼团支持3-6人成团，旨在提升直播间在线人数、停留时长与下单转化，为黑五大促新增促销手段。",
+    "source": "https://glosellers.com/newsflash/ptkx",
+    "tags": [
+      "TikTok Shop",
+      "直播电商",
+      "砍价",
+      "拼团",
+      "美区POP"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_003",
+    "date": "2026-10-27",
+    "category": "平台合规",
+    "title": "Shopee更新《跨境卖家服务条款》，10月20日生效",
+    "summary": "Shopee于2026年10月20日更新《跨境卖家服务条款》，要求卖家审慎阅读更新后的条款，特别是责任限制及相关权利义务部分。卖家需及时关注平台规则变化，确保合规经营。",
+    "source": "https://shopee.cn/edu/article/28563",
+    "tags": [
+      "Shopee",
+      "平台条款",
+      "跨境卖家",
+      "合规"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_004",
+    "date": "2026-10-27",
+    "category": "贸易政策",
+    "title": "亚马逊2026年美国站销售佣金与FBA费用调整：平均每件涨0.08美元",
+    "summary": "亚马逊公布2026年美国站销售佣金和亚马逊物流费用变更，平均每件售出商品的FBA费用将增加0.08美元，涨幅低于商品平均售价的0.5%。卖家需重新核算成本结构，调整定价与库存策略。",
+    "source": "https://sellercentral.amazon.com/help/hub/reference/external/G201411300",
+    "tags": [
+      "亚马逊",
+      "FBA费用",
+      "销售佣金",
+      "美国站",
+      "成本"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_005",
+    "date": "2026-10-27",
+    "category": "平台合规",
+    "title": "亚马逊商品捆绑政策9月30日起扩展至大多数商品分类",
+    "summary": "亚马逊自2026年9月30日起将商品捆绑政策要求扩展至大多数商品分类，所有分类中的商品捆绑包必须是原始制造商或品牌包装的商品配置，以确保捆绑商品为正品且可安全使用，提升买家购买信心。",
+    "source": "https://sellercentral.amazon.com/help/hub/reference/external/GQHQGBTD7XB7EECN",
+    "tags": [
+      "亚马逊",
+      "商品捆绑",
+      "平台政策",
+      "合规",
+      "品牌"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_006",
+    "date": "2026-10-27",
+    "category": "贸易政策",
+    "title": "欧盟海关改革落地：150欧元以下低值包裹取消免税，每件征收3欧元定额关税",
+    "summary": "欧盟自2026年7月1日起取消150欧元以下低值包裹免关税政策，改为每件征收3欧元临时定额关税，政策暂行至2028年底。跨境电商卖家需关注清关成本上升，并评估欧洲本土仓备货方案。",
+    "source": "http://fw-kj.com/news/list_0_2.html",
+    "tags": [
+      "欧盟",
+      "关税",
+      "清关",
+      "低值包裹",
+      "跨境物流"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_007",
+    "date": "2026-10-27",
+    "category": "市场趋势",
+    "title": "全球电商物流2026年增速降至6.2%，关税改革拖累跨境件",
+    "summary": "报告预计2026年全球电商物流增速降至6.2%，主要受网购放缓及美国、欧盟取消小额包裹免税待遇影响。美国2025年8月29日起取消800美元以下包裹免税，欧盟7月1日起取消150欧元免税门槛，跨境直邮模式成本承压。",
+    "source": "https://m.chwang.com/topic/packagepolicy",
+    "tags": [
+      "电商物流",
+      "关税",
+      "市场趋势",
+      "跨境件",
+      "免税政策"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_008",
+    "date": "2026-10-27",
+    "category": "市场趋势",
+    "title": "前三季度长三角区域进出口总值创历史同期新高，机电产品出口增28.9%",
+    "summary": "2026年前三季度长三角区域进出口总值创历史新高，出口机电产品6.23万亿元，同比增长28.9%，其中集成电路增1.1倍、汽车增68.2%；新三样出口6644.6亿元，增62.1%，显示区域先进制造业出口动能强劲。",
+    "source": "https://www.ikjzd.com/news?current=5",
+    "tags": [
+      "长三角",
+      "进出口",
+      "机电产品",
+      "新三样",
+      "外贸数据"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_009",
+    "date": "2026-10-27",
+    "category": "AI模型更新",
+    "title": "OpenAI发布GPT-6.1 Terra：强化视觉推理与计算机操作，API价格降低50%",
+    "summary": "当地时间2026年10月26日，OpenAI宣布推出GPT-6.1 Terra。该模型定位快速高效，适用于高体量专业工作，具备更强的图像分析、视觉推理和计算机操作能力，可帮助用户起草提案、解读图纸、填写表单和编辑视频；标准API价格比GPT-5.6 Terra和GPT-6.1 Sol低50%。",
+    "source": "https://openai.com/zh-Hans-CN/news/company-announcements/?display=list",
+    "tags": [
+      "OpenAI",
+      "GPT-6.1 Terra",
+      "大模型",
+      "视觉推理",
+      "API降价"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_010",
+    "date": "2026-10-27",
+    "category": "AI模型更新",
+    "title": "Google Gemini 4 Argon正式版(GA)发布，面向复杂编码与Agent任务",
+    "summary": "2026年10月13日，Google Gemini API changelog显示Gemini 4 Argon（gemini-4-argon）正式版已发布，是Gemini系列中功能最强大的模型，专为复杂编码、代理、数学和科学任务设计。",
+    "source": "https://ai.google.dev/gemini-api/docs/changelog?hl=zh-cn",
+    "tags": [
+      "Google",
+      "Gemini 4 Argon",
+      "大模型",
+      "编码",
+      "Agent"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_011",
+    "date": "2026-10-27",
+    "category": "AI模型更新",
+    "title": "Anthropic发布Claude Haiku 5.5：首个支持推理强度调节的Haiku模型",
+    "summary": "2026年10月7日，Anthropic正式发布Claude Haiku 5.5。该模型是Haiku系列首个引入可调节推理强度的模型，提供Low、Med、High、Xhigh、Max五档配置，在计算机操作、编码等任务上性能显著提升，同时API价格更具竞争力。",
+    "source": "https://www.datalearner.com/ai-models/pretrained-models/claude-haiku-5-5",
+    "tags": [
+      "Anthropic",
+      "Claude Haiku 5.5",
+      "推理强度",
+      "API定价"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_012",
+    "date": "2026-10-27",
+    "category": "AI模型更新",
+    "title": "月之暗面发布Kimi K3.1 Pro：3万亿参数、100万上下文开源模型",
+    "summary": "2026年10月24日，月之暗面发布新一代开源模型Kimi K3.1 Pro，参数规模达3万亿级，支持100万词元上下文窗口，在代码、3D创作、金融研究和长程Agent能力上提升显著，综合智能水平接近全球领先闭源模型。",
+    "source": "http://www.stdaily.com/web/gdxw/2026-10/24/content_602239.html",
+    "tags": [
+      "月之暗面",
+      "Kimi K3.1 Pro",
+      "开源模型",
+      "长上下文",
+      "Agent"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_013",
+    "date": "2026-10-27",
+    "category": "AI功能更新",
+    "title": "DeepSeek V4.1-Flash-1017更新并开放自研搜索API",
+    "summary": "2026年10月17日，DeepSeek官方宣布V4.1 Flash已更新至V4.1-Flash-1017版本，网页端、APP与API模型已同步变更。同时DeepSeek宣布开放自研搜索API，该搜索引擎为AI原生通用搜索引擎，索引全球千亿级网页，支持多语言实时搜索。",
+    "source": "https://api-docs.deepseek.com/zh-cn/updates/",
+    "tags": [
+      "DeepSeek",
+      "V4.1-Flash-1017",
+      "搜索API",
+      "多模态"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_014",
+    "date": "2026-10-27",
+    "category": "AI功能更新",
+    "title": "字节豆包工作新增创作画布功能并接入豆包2.1 Lite模型",
+    "summary": "2026年10月9日，豆包工作宣布新增「创作画布」功能，并正式接入豆包2.1 Lite模型。画布将素材、设计方案与创作成果集中到同一页面，用户可在无限画布上查看、对比和整理，从一句需求到成套视觉的创作流程更加高效。",
+    "source": "https://finance.sina.com.cn/jjxw/2026-10-10/doc-iniustfr2346251.shtml.md",
+    "tags": [
+      "字节",
+      "豆包",
+      "创作画布",
+      "豆包2.1 Lite",
+      "AI办公"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_015",
+    "date": "2026-10-27",
+    "category": "AI功能更新",
+    "title": "快手可灵Kling 4.0十月上线：单次生成30秒，支持10个关键帧控制",
+    "summary": "2026年9月28日，快手可灵AI宣布新一代视频生成模型Kling 4.0将于10月正式上线。相较3.0最高15秒，4.0将原生视频时长翻倍至30秒，并支持最多10个关键帧控制，轻量版Kling 4.0 Flash已向黑金年卡会员开放抢先体验。",
+    "source": "https://www.dianyingjie.com.cn/2026/1006/406589.shtml",
+    "tags": [
+      "快手",
+      "可灵",
+      "Kling 4.0",
+      "AI视频",
+      "关键帧"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  },
+  {
+    "id": "news_20261027_016",
+    "date": "2026-10-27",
+    "category": "AI功能更新",
+    "title": "字节跳动Seedance 2.0正式发布：支持15秒高质量多镜头音视频生成",
+    "summary": "字节跳动Seed团队正式发布Seedance 2.0视频生成模型，支持15秒高质量多镜头音视频输出，具备双声道音频能力，可实现极致拟真的视听效果，并配合参考和编辑能力降低影视、广告、电商与游戏场景的内容制作成本。目前已上线即梦AI、豆包等平台。",
+    "source": "https://seed.bytedance.com/zh/blog/seedance-2-0-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83",
+    "tags": [
+      "字节",
+      "Seedance 2.0",
+      "AI视频",
+      "多模态",
+      "即梦"
+    ],
+    "read": false,
+    "createdAt": 1793061157876,
+    "addedToPool": false
+  }
+]
