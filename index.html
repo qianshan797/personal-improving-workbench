@@ -14864,6 +14864,16 @@ CREATE POLICY "allow_all" ON workbench_sync
                 cb('f:' + fnv1a64Hex(bytes));
             } catch (e) { cb(null); }
         }
+        // v54：同步计算指纹（旧数据没有指纹时补齐），供合并判重使用
+        function photoFingerprintSync(dataUrl) {
+            try {
+                var b64 = String(dataUrl).split(',')[1] || '';
+                var bin = atob(b64);
+                var bytes = new Uint8Array(bin.length);
+                for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+                return 'f:' + fnv1a64Hex(bytes);
+            } catch (e) { return null; }
+        }
         // 把 {checked, photos:[dataURL], hashes:[指纹]} 拆成 [{s, h}] 配对
         // v54：打卡照片改存 Supabase Storage，云同步行里只保留 URL，
         // 避免整行 JSONB 达到数 MB 触发 Supabase 语句超时（57014）。
@@ -14926,7 +14936,11 @@ CREATE POLICY "allow_all" ON workbench_sync
             var out = [];
             for (var i = 0; i < ps.length; i++) {
                 if (!ps[i]) continue;
-                out.push({ s: ps[i], h: hs[i] || null });
+                // 旧数据 hashes 为空串：对 base64 照片现场补算指纹，
+                // 才能与云端已迁移的 Storage URL 命中同一张照片，避免把 base64 又推回去
+                var h = hs[i] || null;
+                if (!h && isDataPhoto(ps[i])) { try { h = photoFingerprintSync(ps[i]); } catch (e) { h = null; } }
+                out.push({ s: ps[i], h: h });
             }
             return out;
         }
