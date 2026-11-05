@@ -10057,6 +10057,34 @@ CREATE POLICY "allow_all" ON workbench_sync
                 const val = localStorage.getItem(k);
                 if (val !== null) data[k] = val;
             });
+            // v54 体积保护：若打卡里仍有本地 base64 照片（Storage 上传失败或旧数据未迁移），
+            // 整行会达到数 MB 触发 Supabase 语句超时（57014）。这里剔除 base64 照片，
+            // 只同步 URL；被剔除的照片仍完整保留在本机 localStorage 中。
+            try {
+                const ciVal = data[STORAGE_KEY_STUDY_CHECKIN];
+                if (ciVal && ciVal.length > 1200000) {
+                    const ciMap = JSON.parse(ciVal);
+                    let stripped = 0;
+                    Object.keys(ciMap).forEach(dk => {
+                        const e = ciMap[dk];
+                        if (!e || !Array.isArray(e.photos)) return;
+                        const hs = Array.isArray(e.hashes) ? e.hashes : [];
+                        const keepP = [], keepH = [];
+                        e.photos.forEach((p, i) => {
+                            if (p && p.indexOf('data:') !== 0) { keepP.push(p); keepH.push(hs[i] || ''); }
+                            else stripped++;
+                        });
+                        e.photos = keepP;
+                        e.hashes = keepH;
+                    });
+                    if (stripped > 0) {
+                        data[STORAGE_KEY_STUDY_CHECKIN] = JSON.stringify(ciMap);
+                        console.warn('[同步] 打卡数据过大，已剔除 ' + stripped + ' 张仅存本机的照片，避免上传超时');
+                    }
+                }
+            } catch (eGuard) {
+                console.error('[同步] 体积保护异常:', eGuard);
+            }
             return data;
         }
 
@@ -14837,6 +14865,61 @@ CREATE POLICY "allow_all" ON workbench_sync
             } catch (e) { cb(null); }
         }
         // 把 {checked, photos:[dataURL], hashes:[指纹]} 拆成 [{s, h}] 配对
+        // v54：打卡照片改存 Supabase Storage，云同步行里只保留 URL，
+        // 避免整行 JSONB 达到数 MB 触发 Supabase 语句超时（57014）。
+        const STORAGE_BUCKET_CHECKIN = 'checkins';
+        function isHttpPhoto(s) { return typeof s === 'string' && /^https?:\/\//i.test(s); }
+        function isDataPhoto(s) { return typeof s === 'string' && s.indexOf('data:') === 0; }
+        function dataUrlToBlob(dataUrl) {
+            var parts = String(dataUrl).split(',');
+            var mime = (parts[0].match(/data:([^;]+);base64/) || [])[1] || 'image/webp';
+            var bin = atob(parts[1] || '');
+            var bytes = new Uint8Array(bin.length);
+            for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+            return new Blob([bytes], { type: mime });
+        }
+        // 路径按"源文件指纹"命名：同一张照片重复上传会覆盖同一个对象，天然幂等
+        function checkinPhotoPath(dateStr, hash) {
+            var clean = String(hash || '').replace(/^f:/, '').replace(/[^0-9a-zA-Z]/g, '').slice(0, 64);
+            if (!clean) clean = 'p' + Date.now() + Math.random().toString(36).slice(2, 8);
+            return 'study/' + dateStr + '/' + clean + '.webp';
+        }
+        function uploadCheckinPhoto(pair, dateStr) {
+            return new Promise(function(resolve) {
+                try {
+                    if (!pair || !pair.s || isHttpPhoto(pair.s)) { resolve(pair); return; }
+                    if (typeof supabaseClient === 'undefined' || !supabaseClient || !supabaseClient.storage) { resolve(pair); return; }
+                    var path = checkinPhotoPath(dateStr, pair.h);
+                    var blob = dataUrlToBlob(pair.s);
+                    supabaseClient.storage.from(STORAGE_BUCKET_CHECKIN)
+                        .upload(path, blob, { upsert: true, contentType: blob.type || 'image/webp', cacheControl: '3600' })
+                        .then(function(res) {
+                            if (res && res.error) { console.warn('[照片上传] 失败:', res.error.message || res.error); resolve(pair); return; }
+                            var pub = supabaseClient.storage.from(STORAGE_BUCKET_CHECKIN).getPublicUrl(path);
+                            var url = pub && pub.data && pub.data.publicUrl;
+                            if (url) pair.s = url;
+                            resolve(pair);
+                        })
+                        .catch(function(err) {
+                            console.warn('[照片上传] 异常:', err && err.message ? err.message : err);
+                            resolve(pair);
+                        });
+                } catch (e) {
+                    console.warn('[照片上传] 异常:', e);
+                    resolve(pair);
+                }
+            });
+        }
+        function deleteCheckinPhotoObject(photoUrl) {
+            try {
+                if (!isHttpPhoto(photoUrl) || typeof supabaseClient === 'undefined' || !supabaseClient || !supabaseClient.storage) return;
+                var marker = '/storage/v1/object/public/' + STORAGE_BUCKET_CHECKIN + '/';
+                var idx = String(photoUrl).indexOf(marker);
+                if (idx === -1) return;
+                var path = String(photoUrl).slice(idx + marker.length).split('?')[0];
+                supabaseClient.storage.from(STORAGE_BUCKET_CHECKIN).remove([path]).catch(function() {});
+            } catch (e) {}
+        }
         function checkinPairs(info) {
             var ps = (info && Array.isArray(info.photos)) ? info.photos : [];
             var hs = (info && Array.isArray(info.hashes)) ? info.hashes : [];
@@ -14862,6 +14945,8 @@ CREATE POLICY "allow_all" ON workbench_sync
                     var idx = seen[ks[i]];
                     if (idx !== undefined) {
                         if (!out[idx].h && pair.h) out[idx].h = pair.h;
+                        // v54：同一张照片既有 Storage URL 又有本地 base64 时，优先保留 URL
+                        if (isDataPhoto(out[idx].s) && isHttpPhoto(pair.s)) out[idx].s = pair.s;
                         ks.forEach(function(k) { if (seen[k] === undefined) seen[k] = idx; });
                         return;
                     }
@@ -15019,11 +15104,27 @@ CREATE POLICY "allow_all" ON workbench_sync
             const allPairs = checkinPairs(info).concat(checkinPendingPhotos || []);
             const merged = dedupePairs(allPairs);
             const dropped = allPairs.length - merged.length;
-            map[dateStr] = pairsToEntry(merged, true);
-            saveStudyCheckin(map);
-            closeCheckinModal();
-            checkinPendingPhotos = [];
-            showSyncToast('已保存 ' + merged.length + ' 张照片' + (dropped > 0 ? '（已自动去掉 ' + dropped + ' 张重复）' : ''), 'success');
+            const needUpload = merged.filter(function(p) { return p && p.s && !isHttpPhoto(p.s); });
+
+            function finishCheckinSave(failCount) {
+                map[dateStr] = pairsToEntry(merged, true);
+                saveStudyCheckin(map);
+                closeCheckinModal();
+                checkinPendingPhotos = [];
+                var msg = '已保存 ' + merged.length + ' 张照片' + (dropped > 0 ? '（已自动去掉 ' + dropped + ' 张重复）' : '');
+                if (failCount > 0) msg += '（' + failCount + ' 张上传失败，只存在本机）';
+                showSyncToast(msg, failCount > 0 ? 'error' : 'success');
+            }
+
+            if (needUpload.length === 0) { finishCheckinSave(0); return; }
+            // v54：先把照片传到 Storage，拿到 URL 再入库，云端只同步 URL
+            showSyncToast('正在上传 ' + needUpload.length + ' 张照片…', 'loading');
+            Promise.all(needUpload.map(function(p) { return uploadCheckinPhoto(p, dateStr); }))
+                .then(function() {
+                    var failed = needUpload.filter(function(p) { return !isHttpPhoto(p.s); }).length;
+                    finishCheckinSave(failed);
+                })
+                .catch(function() { finishCheckinSave(needUpload.length); });
         }
         // 查看打卡照片（大图，多图）
         let viewerPhotoList = [];
@@ -15105,9 +15206,12 @@ CREATE POLICY "allow_all" ON workbench_sync
             if (!info || !info.photos || !info.photos[i]) return;
             const pairs = checkinPairs(info);
             if (i < 0 || i >= pairs.length) return;
+            const removed = pairs[i];
             pairs.splice(i, 1);
             map[dateStr] = pairsToEntry(pairs, info.checked);
             saveStudyCheckin(map);
+            // v54：同步删掉 Storage 里的对象（失败也不影响本地删除）
+            if (removed && removed.s) deleteCheckinPhotoObject(removed.s);
             showSyncToast('已删除第 ' + (i + 1) + ' 张（剩余 ' + pairs.length + ' 张）', 'success');
             // 刷新当前详情面板
             if (currentCheckinDetailDate === dateStr) openCheckinDetail(dateStr);
