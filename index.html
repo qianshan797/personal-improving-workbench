@@ -2515,65 +2515,6 @@ window.__newsFetchPromise = (function() {
             color: rgba(255, 255, 255, 0.52);
         }
 
-        /* 状态趋势 */
-        .home-mood-chart { margin-top: 18px; min-height: 190px; }
-        .home-mood-bars {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 10px;
-            height: 190px;
-        }
-        .home-mood-col {
-            flex: 1 1 0;
-            min-width: 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 7px;
-        }
-        .home-mood-val {
-            font-size: 10px;
-            color: var(--hm-text-4);
-            font-variant-numeric: tabular-nums;
-        }
-        .home-mood-bar {
-            width: 100%;
-            max-width: 26px;
-            min-height: 6px;
-            border-radius: 8px 8px 4px 4px;
-            background: linear-gradient(180deg, #6E8FBF 0%, #3A5A88 100%);
-            transition: height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .home-mood-col.today .home-mood-bar {
-            background: linear-gradient(180deg, var(--primary) 0%, #B98A2E 100%);
-        }
-        .home-mood-day {
-            font-size: 10.5px;
-            color: var(--hm-text-4);
-            white-space: nowrap;
-        }
-        .home-mood-col.today .home-mood-day {
-            color: var(--hm-text-2);
-            font-weight: 600;
-        }
-        .home-mood-empty {
-            min-height: 190px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-        }
-        .home-mood-empty-icon { font-size: 30px; opacity: 0.45; }
-        .home-mood-empty-text {
-            font-size: 12px;
-            color: var(--hm-text-4);
-            text-align: center;
-            line-height: 1.7;
-        }
 
         @media (max-width: 1100px) {
             .home-row-2 { grid-template-columns: 1fr; }
@@ -2591,7 +2532,6 @@ window.__newsFetchPromise = (function() {
             .home-habit-row { grid-template-columns: minmax(0, 1fr) repeat(7, 19px) 36px; gap: 5px; }
             .home-habit-cell { width: 19px; height: 19px; border-radius: 6px; }
             .home-habit-name { font-size: 11.5px; }
-            .home-mood-bars { gap: 6px; }
             .pomo-ring-wrap { width: 150px; height: 150px; }
         }
 
@@ -8529,6 +8469,142 @@ window.__newsFetchPromise = (function() {
             color: var(--on-accent);
         }
 
+        /* ===== v55 每日一签 ===== */
+        .home-oracle-card {
+            background: linear-gradient(135deg, #FFFBF0 0%, #FDF2E3 100%);
+            border: 1px solid #E8D5B7;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        body.dark-mode .home-oracle-card {
+            background: linear-gradient(135deg, #3D2B1F 0%, #2A1D14 100%);
+            border-color: #5C4033;
+        }
+        .home-oracle-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+        }
+        .home-oracle-title-wrap { display: flex; align-items: center; gap: 8px; }
+        .home-oracle-title-en { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; color: #8B6F47; }
+        body.dark-mode .home-oracle-title-en { color: #D4A574; }
+        .home-oracle-title {
+            font-size: 15px; font-weight: 600; color: #5C4033;
+            display: flex; align-items: center; gap: 6px;
+        }
+        body.dark-mode .home-oracle-title { color: #E8D5B7; }
+        .home-oracle-date {
+            font-size: 12px; color: #8B6F47; letter-spacing: 1px;
+        }
+        body.dark-mode .home-oracle-date { color: #D4A574; }
+
+        /* 签筒 */
+        .divination-shake-vase {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            padding: 12px 0 4px;
+            transition: transform .2s;
+        }
+        .divination-shake-vase:hover { transform: translateY(-3px); }
+        .divination-shake-vase.shaking { animation: shake .5s ease-in-out 4; }
+        @keyframes shake {
+            0%,100% { transform: rotate(0); }
+            25% { transform: rotate(-8deg) translateY(2px); }
+            75% { transform: rotate(8deg) translateY(-2px); }
+        }
+        .divination-vase-body { display: flex; flex-direction: column; align-items: center; }
+        .divination-vase-top {
+            width: 110px; height: 14px; border-radius: 6px 6px 0 0;
+            background: linear-gradient(180deg, #C0392B, #8B2A1F);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,.3);
+        }
+        .divination-vase-neck {
+            width: 85px; height: 12px;
+            background: linear-gradient(180deg, #A93226, #7B241C);
+        }
+        .divination-vase-cup {
+            width: 92px; height: 80px; position: relative;
+            background: linear-gradient(180deg, #922B21, #641E16);
+            border-radius: 0 0 8px 8px;
+            box-shadow: inset 0 4px 12px rgba(0,0,0,.4);
+            overflow: hidden;
+        }
+        .divination-vase-base {
+            width: 118px; height: 10px; border-radius: 3px;
+            background: linear-gradient(180deg, #7D6608, #5D4E06);
+        }
+        .divination-stick {
+            position: absolute; top: 6px; width: 4px; height: 75px;
+            background: linear-gradient(180deg, #F4D03F, #B7950B);
+            border-radius: 2px;
+            box-shadow: 1px 0 2px rgba(0,0,0,.3);
+        }
+        .divination-stick-1 { left: 20px; transform: rotate(-8deg); }
+        .divination-stick-2 { left: 42px; transform: rotate(0deg); }
+        .divination-stick-3 { left: 64px; transform: rotate(10deg); }
+        .divination-shake-hint {
+            margin-top: 8px;
+            font-size: 12px;
+            color: #8B2A1F;
+            letter-spacing: 2px;
+        }
+        body.dark-mode .divination-shake-hint { color: #E8A89A; }
+
+        /* 每日一签结果 */
+        .divination-oracle-result {
+            padding: 14px;
+            text-align: center;
+            font-family: "STKaiti", "KaiTi", "楷体", serif;
+        }
+        .divination-result-level {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            letter-spacing: 6px;
+        }
+        .divination-result-level.daji { color: #C0392B; }
+        .divination-result-level.shangji { color: #E67E22; }
+        .divination-result-level.zhongji { color: #8B6914; }
+        .divination-result-level.xiaoji { color: #7D6608; }
+        .divination-result-level.ping { color: #5D6D7E; }
+        .divination-result-level.pingji { color: #95A5A6; }
+        .divination-result-level.xiong { color: #5D6D7E; }
+        .divination-result-number {
+            font-size: 12px;
+            color: #8B6F47;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        body.dark-mode .divination-result-number { color: #D4A574; }
+        .divination-result-poem {
+            font-size: 15px;
+            line-height: 2;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .divination-result-meaning {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            padding-top: 10px;
+            border-top: 1px dashed #D5C4A8;
+            font-family: inherit;
+        }
+        body.dark-mode .divination-result-meaning { border-top-color: #5C4033; }
+        .divination-btn-ghost {
+            padding: 6px 14px; background: transparent; color: #8B6F47;
+            border: 1px solid #D4A574; border-radius: 8px; cursor: pointer; font-size: 12px;
+            font-family: inherit; margin-top: 10px;
+        }
+        .divination-btn-ghost:hover { background: #F5EFE4; }
+        body.dark-mode .divination-btn-ghost { color: #D4A574; border-color: #5C4033; }
+        body.dark-mode .divination-btn-ghost:hover { background: #3D2B1F; }
+
     </style>
 </head>
 <body>
@@ -8694,6 +8770,35 @@ window.__newsFetchPromise = (function() {
                         <div class="home-vitals" id="homeVitals"></div>
                     </div>
 
+                    <!-- 每日一签 -->
+                    <div class="home-oracle-card">
+                        <div class="home-oracle-head">
+                            <div class="home-oracle-title-wrap">
+                                <div class="home-oracle-title-en">DAILY ORACLE</div>
+                                <div class="home-oracle-title">🔮 每日一签</div>
+                            </div>
+                            <div class="home-oracle-date" id="homeOracleDate"></div>
+                        </div>
+                        <div class="divination-oracle-stage" id="oracleStage">
+                            <div class="divination-oracle-empty" id="oracleEmpty">
+                                <div class="divination-shake-vase" id="shakeVase" onclick="drawDailyOracle()">
+                                    <div class="divination-vase-body">
+                                        <div class="divination-vase-top"></div>
+                                        <div class="divination-vase-neck"></div>
+                                        <div class="divination-vase-cup">
+                                            <div class="divination-stick divination-stick-1"></div>
+                                            <div class="divination-stick divination-stick-2"></div>
+                                            <div class="divination-stick divination-stick-3"></div>
+                                        </div>
+                                        <div class="divination-vase-base"></div>
+                                    </div>
+                                    <div class="divination-shake-hint">轻摇签筒 · 心诚则灵</div>
+                                </div>
+                            </div>
+                            <div class="divination-oracle-result" id="oracleResult" style="display:none;"></div>
+                        </div>
+                    </div>
+
                     <!-- 待办与习惯 -->
                     <div class="home-block">
                         <div class="home-block-head">
@@ -8762,11 +8867,6 @@ window.__newsFetchPromise = (function() {
                                     <div><strong id="pomoTodayMinutes">0</strong><span>专注分钟</span></div>
                                     <div><strong id="pomoTodayRounds">0</strong><span>轮次</span></div>
                                 </div>
-                            </div>
-                            <div class="home-card home-mood-card">
-                                <div class="home-card-en">FOCUS TREND · 近 7 天</div>
-                                <div class="home-card-title">本周状态趋势</div>
-                                <div class="home-mood-chart" id="homeMoodChart"></div>
                             </div>
                         </div>
                     </div>
@@ -9167,6 +9267,7 @@ window.__newsFetchPromise = (function() {
                     </div>
                 </div>
             </div>
+
         </main>
     </div>
 
@@ -14078,7 +14179,6 @@ CREATE POLICY "allow_all" ON workbench_sync
                     localStorage.setItem(tk, JSON.stringify(tasks));
                     // 重渲染
                     if (typeof renderTasks === 'function') renderTasks();
-                    if (typeof renderHomeMood === 'function') renderHomeMood();
                     if (typeof pushToCloud === 'function') pushToCloud().catch(function(){});
                     var msg = '已清理 ' + removed + ' 条测试任务';
                     if (tplAfter > 0) msg += ' + ' + tplAfter + ' 条模板';
@@ -19813,50 +19913,6 @@ CREATE POLICY "allow_all" ON workbench_sync
             }).join('');
         }
 
-        // 本周状态趋势：近 7 天专注时长
-        function renderHomeMood() {
-            const box = document.getElementById('homeMoodChart');
-            if (!box) return;
-            let h;
-            try { h = getHealth(); } catch (e) { h = null; }
-            if (!h) {
-                box.innerHTML = '<div class="home-mood-empty"><div class="home-mood-empty-icon">📊</div><div class="home-mood-empty-text">暂无本周数据<br>在「个人健康管理」中记录每日状态</div></div>';
-                return;
-            }
-            const now = new Date();
-            const wdNames = ['日', '一', '二', '三', '四', '五', '六'];
-            const days = [];
-            for (let i = 6; i >= 0; i--) {
-                const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() - i);
-                const ds = fmtDate(d);
-                let rec = null;
-                if (ds === h.daily.date) rec = h.daily;
-                else {
-                    for (let j = 0; j < h.history.length; j++) {
-                        if (h.history[j].date === ds) { rec = h.history[j]; break; }
-                    }
-                }
-                days.push({
-                    label: '周' + wdNames[d.getDay()],
-                    value: rec ? (rec.focusHours || 0) : 0,
-                    today: ds === getTodayDate()
-                });
-            }
-            const maxVal = Math.max.apply(null, days.map(function(d) { return d.value; }).concat([2]));
-            if (!days.some(function(d) { return d.value > 0; })) {
-                box.innerHTML = '<div class="home-mood-empty"><div class="home-mood-empty-icon">📊</div><div class="home-mood-empty-text">暂无本周数据 · 在「个人健康管理」中记录每日状态</div></div>';
-                return;
-            }
-            box.innerHTML = '<div class="home-mood-bars">' + days.map(function(d) {
-                const hPx = d.value > 0 ? Math.round(d.value / maxVal * 120) + 6 : 6;
-                return '<div class="home-mood-col' + (d.today ? ' today' : '') + '">' +
-                    '<div class="home-mood-val">' + (d.value > 0 ? d.value + 'h' : '—') + '</div>' +
-                    '<div class="home-mood-bar" style="height:' + hPx + 'px"></div>' +
-                    '<div class="home-mood-day">' + (d.today ? '今天' : d.label) + '</div>' +
-                '</div>';
-            }).join('') + '</div>';
-        }
-
         // 番茄钟
         function getPomodoroState() {
             const todayStr = getTodayDate();
@@ -20018,7 +20074,6 @@ CREATE POLICY "allow_all" ON workbench_sync
             if (healthUpdated) {
                 try { if (typeof renderHealth === 'function') renderHealth(); } catch (eRender) {}
                 try { if (typeof renderHomeVitals === 'function') renderHomeVitals(); } catch (eHV) {}
-                try { if (typeof renderHomeMood === 'function') renderHomeMood(); } catch (eHM) {}
             }
             if (typeof pushToCloud === 'function' && syncEnabled) pushToCloud().catch(function() {});
             renderPomodoro();
@@ -20069,7 +20124,6 @@ CREATE POLICY "allow_all" ON workbench_sync
             renderHomeVitals();
             renderHomeHabits();
             renderHomeTodo();
-            renderHomeMood();
             renderPomodoro();
         }
         function initHomeDashboard() {
@@ -20333,6 +20387,190 @@ CREATE POLICY "allow_all" ON workbench_sync
                 console.warn('[PWA] Service Worker 注册失败，页面功能不受影响:', err);
             });
         });
+    })();
+    </script>
+
+    <script>
+    /* ===== v55 每日一签 JS ===== */
+    (function(){
+        var STORAGE_ORACLE_CACHE = 'divination_oracle_today';
+
+        // 72 支签（6 级），经典签诗风格
+        var ORACLES = [
+            // 上上签 (8)
+            {lv:'上上', cls:'daji', poem:'旭日东升照九州，鹏程万里任遨游。青云直上无阻碍，福禄双全乐悠悠。', mean:'运势极佳，诸事顺遂，大胆行动必有收获。贵人运强，可主动出击。'},
+            {lv:'上上', cls:'daji', poem:'春风得意马蹄疾，一日看尽长安花。天时地利人和合，功成名就耀门楣。', mean:'事业学业节节攀升，考试面试顺利。感情甜蜜，单身者遇良缘。'},
+            {lv:'上上', cls:'daji', poem:'金龙入海兴风雨，猛虎下山震山林。胸有丘壑天地宽，守得云开见月明。', mean:'蓄势已久的事即将突破，可承担重任。新机会来临，敢于亮剑。'},
+            {lv:'上上', cls:'daji', poem:'满园春色关不住，一枝红杏出墙来。无心插柳柳成荫，有心栽花花自开。', mean:'惊喜之签，意外收获。不刻意反而得，顺其自然。'},
+            {lv:'上上', cls:'daji', poem:'吉星高照喜临门，万事如意皆称心。财源广进达三江，福寿安康享太平。', mean:'偏财正财皆旺，身体康健。家宅安宁，喜事临门。'},
+            {lv:'上上', cls:'daji', poem:'十年寒窗无人问，一举成名天下知。厚积薄发在今日，切莫犹豫失良机。', mean:'长期努力见成果，适合答辩、述职、发布作品。名声在外。'},
+            {lv:'上上', cls:'daji', poem:'喜鹊枝头报佳音，故人来访喜盈门。失而复得旧物归，踏破铁鞋终觅寻。', mean:'旧友重逢、失物找回、久候消息将至。沟通顺利。'},
+            {lv:'上上', cls:'daji', poem:'山重水复疑无路，柳暗花明又一村。绝境逢生转吉运，拨云见日显光明。', mean:'困境即将过去，转机在眼前。坚持最后一步。'},
+
+            // 上吉签 (12)
+            {lv:'上吉', cls:'shangji', poem:'千里之行始足下，稳步前行终到家。脚踏实地不浮夸，功不唐捐信有涯。', mean:'求稳不求快，步步为营。长期投资/学习的好签。'},
+            {lv:'上吉', cls:'shangji', poem:'月满西楼照佳人，花好月圆正当时。良辰莫辜负，佳期不再来。', mean:'感情顺遂，谈婚论嫁之时。单身者有心动信号。'},
+            {lv:'上吉', cls:'shangji', poem:'蜜蜂采花终得蜜，耕牛犁田必有收。一分耕耘一分果，莫问前程只问心。', mean:'劳动有回报，努力有结果。不要焦虑时效。'},
+            {lv:'上吉', cls:'shangji', poem:'云开雾散见青山，拨云见日艳阳天。困龙出水翻身日，扬眉吐气笑开颜。', mean:'转运之签，压抑已久的局面松动。适合启动新项目。'},
+            {lv:'上吉', cls:'shangji', poem:'春种一粒秋收粟，夏练三伏冬练三九。耐得寂寞守得静，终有拨云见日时。', mean:'继续积累，不要急。冬天的蛰伏是为了春天的爆发。'},
+            {lv:'上吉', cls:'shangji', poem:'玉在椟中求善价，钗于奁内待时飞。你若盛开蝴蝶来，静待花开自然成。', mean:'时机未到，继续打磨自己。是金子终会被看见。'},
+            {lv:'上吉', cls:'shangji', poem:'家和万事兴，人和百事顺。团结力量大，独木难成林。', mean:'团队合作签，需要他人协助。家宅和睦则事事顺。'},
+            {lv:'上吉', cls:'shangji', poem:'东边日出西边雨，道是无情却有情。看似阻碍实有情，柳暗花明别有村。', mean:'坏事里藏着转机，不要只看表面。对方冷淡可能另有隐情。'},
+            {lv:'上吉', cls:'shangji', poem:'乘风破浪会有时，直挂云帆济沧海。莫道前路无知己，天下谁人不识君。', mean:'远方有知遇之人，远行顺利。适合出差、旅行。'},
+            {lv:'上吉', cls:'shangji', poem:'宝剑锋从磨砺出，梅花香自苦寒来。熬过眼前小磨难，他日化龙上九天。', mean:'正在经历考验，挺过去就是蜕变。不要放弃。'},
+            {lv:'上吉', cls:'shangji', poem:'问渠哪得清如许，为有源头活水来。不断学习不偷懒，与时俱进跟浪潮。', mean:'继续学习、充电。新技能会带来新机会。'},
+            {lv:'上吉', cls:'shangji', poem:'赠人玫瑰手留香，帮人助人帮自己。广结善缘多路宽，贵人自然到身边。', mean:'今日宜帮助他人，善举必有回报。'},
+
+            // 中吉签 (16)
+            {lv:'中吉', cls:'zhongji', poem:'不疾不徐稳步走，不争不抢得丰收。中庸之道藏深意，平平淡淡是真修。', mean:'稳中求进，避免激进。今日不宜做重大决策。'},
+            {lv:'中吉', cls:'zhongji', poem:'半亩方塘一鉴开，天光云影共徘徊。问渠哪得清如许？为有源头活水来。', mean:'保持学习心态，更新认知。不要固守旧观念。'},
+            {lv:'中吉', cls:'zhongji', poem:'山不在高有仙名，水不在深有龙灵。内涵胜过外表光，真才实学最要紧。', mean:'不要被虚华所迷，踏实最重要。低调行事。'},
+            {lv:'中吉', cls:'zhongji', poem:'忙中偷闲一杯茶，苦中作乐半日闲。张弛有度才是道，弦绷太紧易折断。', mean:'注意休息，劳逸结合。过度加班反而效率低。'},
+            {lv:'中吉', cls:'zhongji', poem:'磨刀不误砍柴工，欲速不达反受困。先做好准备再出发，急躁反而坏事。', mean:'今日宜准备、不宜行动。磨刀比砍柴重要。'},
+            {lv:'中吉', cls:'zhongji', poem:'三人行必有我师，择其善者而从。虚心求教多学习，海纳百川容万物。', mean:'今日有高人指点的机会，多听少说。'},
+            {lv:'中吉', cls:'zhongji', poem:'福兮祸之所伏，祸兮福之所倚。好事来时防陷阱，逆境之中藏转机。', mean:'辩证地看问题。得意时别忘形，失意时别放弃。'},
+            {lv:'中吉', cls:'zhongji', poem:'纸上得来终觉浅，绝知此事要躬行。读万卷书行万里路，理论要落地。', mean:'今日宜实践、宜出门。别光想不做。'},
+            {lv:'中吉', cls:'zhongji', poem:'君子和而不同，小人同而不和。保持独立思考，不必勉强合群。', mean:'做自己，不必为了迎合而改变。价值观不同不必强求。'},
+            {lv:'中吉', cls:'zhongji', poem:'不以物喜不以己悲，宠辱偕忘把酒临风。心态放平最重要，情绪稳定福气来。', mean:'今日情绪容易波动，多修心。深呼吸、写日记。'},
+            {lv:'中吉', cls:'zhongji', poem:'千里之堤溃蚁穴，防微杜渐要当心。小问题不解决，变大麻烦难收拾。', mean:'检查细节，及时补漏。合同、报告仔细看。'},
+            {lv:'中吉', cls:'zhongji', poem:'前人栽树后人乘凉，你栽的树自己也能乘。做长期有益的事，不必计较短期得失。', mean:'今日宜做积累性的事。投资健康、学习、人际关系。'},
+            {lv:'中吉', cls:'zhongji', poem:'塞翁失马焉知非福，得失之间要看淡。失去未必是坏事，得到也未必是好事。', mean:'今日可能有小失小得，不必太在意。顺其自然。'},
+            {lv:'中吉', cls:'zhongji', poem:'沉默是金，言多必失。今日宜少说多做，尤其在人多的场合。', mean:'管住嘴，尤其是对人评价。言者无心听者有意。'},
+            {lv:'中吉', cls:'zhongji', poem:'选择比努力重要，但努力让选择更多。先努力增加选项，再去选。', mean:'不要纠结于选A还是选B，先让自己有更多选项。'},
+            {lv:'中吉', cls:'zhongji', poem:'健康是1，其他都是0。没有这个1，后面再多0也没用。', mean:'今日宜运动、宜早睡。身体是革命的本钱。'},
+
+            // 小吉签 (14)
+            {lv:'小吉', cls:'xiaoji', poem:'东边不亮西边亮，此路不通换彼路。条条大路通罗马，不必死磕这一处。', mean:'此路不通，换一条。不要钻牛角尖。'},
+            {lv:'小吉', cls:'xiaoji', poem:'大智若愚装糊涂，水至清则无鱼。偶尔睁只眼闭只眼，关系反而更融洽。', mean:'今日宜难得糊涂，小事不必太较真。'},
+            {lv:'小吉', cls:'xiaoji', poem:'一个篱笆三个桩，一个好汉三个帮。今天不要单打独斗，找队友。', mean:'合作比单干好。找人帮忙不是示弱，是智慧。'},
+            {lv:'小吉', cls:'xiaoji', poem:'远亲不如近邻，近邻不如对门。身边的资源要善用，不要舍近求远。', mean:'今日关注身边人、身边事。机会可能就在眼皮底下。'},
+            {lv:'小吉', cls:'xiaoji', poem:'新官上任三把火，不如老官慢慢来。不要急于表现，先站稳脚跟。', mean:'今日不宜高调出风头。默默做事，稳扎稳打。'},
+            {lv:'小吉', cls:'xiaoji', poem:'好事多磨，坏事多拖。今天的拖可能是好事，但也可能是坏事。', mean:'辨别拖延是智慧还是逃避。该做还是得做。'},
+            {lv:'小吉', cls:'xiaoji', poem:'不怕慢只怕站，不怕笨只怕懒。每天进步一点点，复利效应在后面。', mean:'继续前进，哪怕慢。停步就前功尽弃。'},
+            {lv:'小吉', cls:'xiaoji', poem:'会哭的孩子有奶吃，会求助的人走得远。不要什么都自己扛。', mean:'今日学会求助，不要硬撑。说出需要。'},
+            {lv:'小吉', cls:'xiaoji', poem:'有舍才有得，会放弃才会选择。放弃不重要的，才能抓住重要的。', mean:'今日宜做减法。砍掉一些不重要的事。'},
+            {lv:'小吉', cls:'xiaoji', poem:'好奇害死猫，小心驶得万年船。今天对陌生人/陌生事保持谨慎。', mean:'注意安全，尤其是钱财往来、个人信息。'},
+            {lv:'小吉', cls:'xiaoji', poem:'种瓜得瓜种豆得豆，今天播什么种明天收什么果。', mean:'今天做的事决定明天的结果。想清楚再做。'},
+            {lv:'小吉', cls:'xiaoji', poem:'人无完人金无足赤，接受自己的不完美也接受别人的。', mean:'今日宜宽恕，不要追求完美。宽恕别人也宽恕自己。'},
+            {lv:'小吉', cls:'xiaoji', poem:'阳光总在风雨后，不经历风雨怎么见彩虹。', mean:'今日可能有点小波折，但很快就过去。'},
+            {lv:'小吉', cls:'xiaoji', poem:'知足常乐，不知足者常忧。珍惜已有的，不攀比。', mean:'今日宜感恩。写三件今天值得感谢的事。'},
+
+            // 平签 (12)
+            {lv:'平', cls:'ping', poem:'今日宜静不宜动，观望等待是良策。不进不退不折腾，养精蓄锐待时机。', mean:'平平淡淡，没有惊喜也没有惊吓。按部就班就好。'},
+            {lv:'平', cls:'ping', poem:'春有百花秋有月，夏有凉风冬有雪。若无闲事挂心头，便是人间好时节。', mean:'平常心最重要。今天没有特别要做的大事。'},
+            {lv:'平', cls:'ping', poem:'闲看庭前花开花落，漫随天外云卷云舒。看淡得失随遇安，心安处处是桃源。', mean:'今日宜读书、发呆、散步。让心闲下来。'},
+            {lv:'平', cls:'ping', poem:'日升月落四时转，花谢花开年复年。该来的总会来，该走的总会走。', mean:'一切顺其自然。强求不来。'},
+            {lv:'平', cls:'ping', poem:'做一天和尚撞一天钟，今日本分事做好即可。', mean:'不要多想未来，把眼前的事做好。尽人事听天命。'},
+            {lv:'平', cls:'ping', poem:'清茶淡饭最养人，布衣布鞋最自在。简单反而是最好的。', mean:'今日宜简约，不要搞复杂。简单的方案往往最好。'},
+            {lv:'平', cls:'ping', poem:'有缘千里来相会，无缘对面不相识。缘分的事强求不得。', mean:'感情上顺其自然。工作上机会也是。'},
+            {lv:'平', cls:'ping', poem:'是非终日有，不听自然无。今日远离八卦和是非。', mean:'管住耳朵和嘴。别人的事少掺和。'},
+            {lv:'平', cls:'ping', poem:'人各有志不可强，道不同不相为谋。合不来就淡一点。', mean:'今日可能遇到观念不合的人，不必争论。'},
+            {lv:'平', cls:'ping', poem:'好饭不怕晚，好事不怕慢。该来的终究会来，只是时间问题。', mean:'继续等，不要催。急不得的事就让它慢慢来。'},
+            {lv:'平', cls:'ping', poem:'守得云开见月明，静待花开终有时。该做的继续做，不要因为暂时没结果就放弃。', mean:'坚持就是胜利。看不见结果的时候最考验人。'},
+            {lv:'平', cls:'ping', poem:'平平淡淡才是真，轰轰烈烈未必长。珍惜当下的平静。', mean:'今天平静就是好事。不追求刺激，安全就好。'},
+
+            // 平吉/小凶/凶 (10)
+            {lv:'平吉', cls:'pingji', poem:'今日有小消耗，但无碍大局。花点小钱消消灾，破财挡灾是好事。', mean:'可能有小额支出，不必心疼。钱花了会赚回来。'},
+            {lv:'平吉', cls:'pingji', poem:'今日有点小烦扰，深呼吸然后微笑。凡事看淡一点，就过去了。', mean:'小烦恼不影响大局。心态调整一下就好。'},
+            {lv:'小凶', cls:'xiong', poem:'今日不宜行大事，低调谨慎少出门。等待比行动更明智。', mean:'保守日，不宜签合同、不宜投资、不宜远行。'},
+            {lv:'小凶', cls:'xiong', poem:'口舌是非今日多，遇事三缄其口为佳。少说多做，祸从口出。', mean:'今日容易说错话、得罪人。尤其注意社交媒体发言。'},
+            {lv:'小凶', cls:'xiong', poem:'身体小恙勿忽视，及时就医早康复。硬扛反而更麻烦。', mean:'注意身体信号，有不适别硬撑。今天宜休息。'},
+            {lv:'小凶', cls:'xiong', poem:'今日财运欠佳，不宜投资、不宜借钱、不宜赌博。', mean:'看紧钱包，不要借钱给人，也不要向人借。'},
+            {lv:'凶', cls:'xiong', poem:'风雨飘摇今日多，万事小心守平安。退一步海阔天空，忍一时风平浪静。', mean:'凶险之签，但不代表真的有灾难。今日宜低调、宜退不宜进。'},
+            {lv:'凶', cls:'xiong', poem:'月黑风高夜，慎之再慎时。今日任何大事都暂停，保命要紧。', mean:'极端保守日。不要做任何决定，不要签任何文件，不要出行。'},
+            {lv:'凶', cls:'xiong', poem:'塞翁失马焉知非福，今日之失是明日之得。不要太伤心。', mean:'今天可能会失去一些东西，但从长远看未必是坏事。'},
+            {lv:'凶', cls:'xiong', poem:'否极泰来，物极必反。最坏的时候，离好转就不远了。', mean:'至暗时刻。但请相信，黎明已经在路上了。坚持住。'}
+        ];
+
+        // 种子：从日期生成稳定的伪随机索引
+        function daySeed(dateStr) {
+            var h = 0;
+            for (var i = 0; i < dateStr.length; i++) h = (h * 31 + dateStr.charCodeAt(i)) | 0;
+            return Math.abs(h);
+        }
+        function pickOracle(dateStr) {
+            var idx = daySeed(dateStr) % ORACLES.length;
+            return { index: idx + 1, oracle: ORACLES[idx] };
+        }
+        function todayStr() {
+            var d = new Date();
+            return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+        }
+
+        // 每日一签
+        function drawDailyOracle() {
+            var stage = document.getElementById('oracleStage');
+            var vase = document.getElementById('shakeVase');
+            var empty = document.getElementById('oracleEmpty');
+            var result = document.getElementById('oracleResult');
+            if (!vase || !empty || !result) return;
+
+            // 今日已抽过 → 直接展示
+            var cached = localStorage.getItem(STORAGE_ORACLE_CACHE);
+            if (cached) {
+                try {
+                    var c = JSON.parse(cached);
+                    if (c.date === todayStr()) {
+                        showOracleResult(c.index, c.oracle);
+                        return;
+                    }
+                } catch(e) {}
+            }
+
+            // 摇签动画
+            vase.classList.add('shaking');
+            if (stage) stage.style.pointerEvents = 'none';
+            setTimeout(function(){
+                vase.classList.remove('shaking');
+                var pick = pickOracle(todayStr());
+                localStorage.setItem(STORAGE_ORACLE_CACHE, JSON.stringify({date:todayStr(), index:pick.index, oracle:pick.oracle}));
+                showOracleResult(pick.index, pick.oracle);
+                if (stage) stage.style.pointerEvents = 'auto';
+            }, 2200);
+        }
+        function showOracleResult(idx, oracle) {
+            var empty = document.getElementById('oracleEmpty');
+            var result = document.getElementById('oracleResult');
+            if (!empty || !result) return;
+            empty.style.display = 'none';
+            result.style.display = 'block';
+            result.innerHTML =
+                '<div class="divination-result-level '+oracle.cls+'">'+oracle.lv+'</div>'+
+                '<div class="divination-result-number">第 '+idx+' 签</div>'+
+                '<div class="divination-result-poem">'+oracle.poem.split(/[，。]/).filter(Boolean).join('<br>')+'</div>'+
+                '<div class="divination-result-meaning">'+oracle.mean+'</div>'+
+                '<button class="divination-btn-ghost" onclick="resetDailyOracle()">明天再来</button>';
+        }
+        function resetDailyOracle() {
+            localStorage.removeItem(STORAGE_ORACLE_CACHE);
+            var empty = document.getElementById('oracleEmpty');
+            var result = document.getElementById('oracleResult');
+            if (empty) empty.style.display = '';
+            if (result) result.style.display = 'none';
+        }
+        function drawOracleIfCached() {
+            // 更新日期显示
+            var dateEl = document.getElementById('homeOracleDate');
+            if (dateEl) {
+                var d = new Date();
+                var weekdays = ['周日','周一','周二','周三','周四','周五','周六'];
+                dateEl.textContent = weekdays[d.getDay()];
+            }
+            var cached = localStorage.getItem(STORAGE_ORACLE_CACHE);
+            if (cached) {
+                try {
+                    var c = JSON.parse(cached);
+                    if (c.date === todayStr()) showOracleResult(c.index, c.oracle);
+                } catch(e) {}
+            }
+        }
+
+        // 主页加载时：如果今天已抽过，自动展示结果（跳过动画）
+        window.addEventListener('DOMContentLoaded', drawOracleIfCached);
+
+        // 导出给全局
+        window.drawDailyOracle = drawDailyOracle;
+        window.resetDailyOracle = resetDailyOracle;
     })();
     </script>
 </body>
