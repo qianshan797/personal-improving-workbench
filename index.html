@@ -8618,6 +8618,49 @@ window.__newsFetchPromise = (function() {
         body.dark-mode .divination-btn-ghost { color: #D4A574; border-color: #5C4033; }
         body.dark-mode .divination-btn-ghost:hover { background: #3D2B1F; }
 
+        /* ===== 微交互层：水波纹 / 圆环生长 / 照片入场 / 页面切换 ===== */
+        .toolbar-btn { position: relative; overflow: hidden; }
+        .ripple-ink {
+            position: absolute; border-radius: 50%; pointer-events: none;
+            background: currentColor; opacity: 0.16;
+            transform: scale(0); animation: rippleIn 0.55s ease-out forwards;
+        }
+        @keyframes rippleIn { to { transform: scale(1); opacity: 0; } }
+
+        /* 今日概览圆环：进入时描边生长 */
+        .home-ring-fg { animation: ringDraw 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+        @keyframes ringDraw { from { stroke-dashoffset: 276.46; } }
+
+        /* 待保存照片依次掉落 */
+        .checkin-thumb.thumb-enter { animation: thumbDrop 0.34s cubic-bezier(0.22, 0.9, 0.3, 1.2) both; }
+        @keyframes thumbDrop {
+            from { opacity: 0; transform: translateY(-14px) scale(0.86); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* 主页卡片 3D 倾斜：仅精确指针设备启用过渡 */
+        @media (hover: hover) and (pointer: fine) {
+            .home-card { transition: transform 0.18s ease-out; }
+        }
+
+        /* 页面切换入场（不支持 View Transitions 时的兜底） */
+        .page-section.active { animation: pageIn 0.34s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+        /* View Transitions 运行时关闭 CSS 入场，避免双重动画 */
+        body.vt-running .page-section.active { animation: none !important; }
+        @keyframes pageIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        ::view-transition-old(root) { animation: vtOut 0.22s ease both; }
+        ::view-transition-new(root) { animation: vtIn 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+        @keyframes vtOut { to { opacity: 0; } }
+        @keyframes vtIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (prefers-reduced-motion: reduce) {
+            .ripple-ink, .checkin-thumb.thumb-enter, .home-ring-fg, .page-section.active { animation: none !important; }
+            ::view-transition-old(root), ::view-transition-new(root) { animation: none !important; }
+        }
+
     </style>
 </head>
 <body>
@@ -15171,25 +15214,41 @@ CREATE POLICY "allow_all" ON workbench_sync
             dlg.classList.add('active');
         }
         // 渲染待保存的图片缩略图（可删除）
+        function _thumbHtml(i, animate, order) {
+            const pair = checkinPendingPhotos[i];
+            const dataUrl = (pair && pair.s) ? pair.s : '';
+            const cls = 'checkin-thumb' + (animate ? ' thumb-enter' : '');
+            const st = animate ? ' style="animation-delay:' + ((order || 0) * 50) + 'ms"' : '';
+            return '<div class="' + cls + '"' + st + '>' +
+                '<img src="' + dataUrl + '" alt="打卡照片预览" onclick="onPreviewPendingPhoto(' + i + ')"/>' +
+                '<button type="button" class="checkin-thumb-remove" onclick="removeCheckinPendingPhoto(' + i + ')" title="删除">×</button>' +
+            '</div>';
+        }
         function renderCheckinPendingPhotos() {
             const wrap = document.getElementById('checkinPhotoPreviews');
             if (!wrap) return;
             const grid = document.getElementById('checkinPendingGrid');
             const hint = document.getElementById('checkinPendingHint');
             if (!grid) return;
-            if (checkinPendingPhotos.length === 0) {
+            const total = checkinPendingPhotos.length;
+            if (total === 0) {
                 grid.innerHTML = '';
                 if (hint) hint.style.display = 'block';
                 return;
             }
             if (hint) hint.style.display = 'none';
-            grid.innerHTML = checkinPendingPhotos.map(function(pair, i) {
-                const dataUrl = (pair && pair.s) ? pair.s : '';
-                return '<div class="checkin-thumb">' +
-                    '<img src="' + dataUrl + '" alt="打卡照片预览" onclick="onPreviewPendingPhoto(' + i + ')"/>' +
-                    '<button type="button" class="checkin-thumb-remove" onclick="removeCheckinPendingPhoto(' + i + ')" title="删除">×</button>' +
-                '</div>';
-            }).join('');
+            const shown = grid.childElementCount;
+            if (total === shown) return;   // 无变化：不重渲染，避免打断正在播放的入场动画
+            let html = '';
+            if (total > shown) {
+                // 只追加新增项，已有缩略图保持不动
+                for (let i = shown; i < total; i++) html += _thumbHtml(i, true, i - shown);
+                grid.insertAdjacentHTML('beforeend', html);
+            } else {
+                // 数量减少（删除）：整体重渲染，不播放入场
+                for (let i = 0; i < total; i++) html += _thumbHtml(i, false, 0);
+                grid.innerHTML = html;
+            }
         }
         function removeCheckinPendingPhoto(i) {
             checkinPendingPhotos.splice(i, 1);
@@ -19834,6 +19893,15 @@ CREATE POLICY "allow_all" ON workbench_sync
                     '<div class="home-vital-sub">' + it.sub + '</div>' +
                 '</div>';
             }).join('');
+            // 百分比数字滚动增长（仅在数值变化时播放，避免每次渲染都从 0 重跑）
+            const pctSig = items.map(function(it) { return it.pct; }).join(',');
+            if (typeof window.animateCount === 'function' && box.dataset.pctSig !== pctSig) {
+                box.dataset.pctSig = pctSig;
+                const pctEls = box.querySelectorAll('.home-vital-pct');
+                for (let i = 0; i < pctEls.length && i < items.length; i++) {
+                    window.animateCount(pctEls[i], items[i].pct, '%');
+                }
+            }
         }
 
         // 本周习惯追踪表：基于健康数据的目标达成情况
@@ -20597,6 +20665,106 @@ CREATE POLICY "allow_all" ON workbench_sync
         // 导出给全局
         window.drawDailyOracle = drawDailyOracle;
         window.resetDailyOracle = resetDailyOracle;
+    })();
+
+    /* ===== 微交互层：水波纹 / 卡片倾斜 / 数字滚动 / 页面切换过渡 ===== */
+    (function() {
+        function reduceMotion() {
+            return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+        }
+
+        // 1) 按钮水波纹：从点击位置扩散一圈墨色涟漪
+        document.addEventListener('pointerdown', function(ev) {
+            if (reduceMotion()) return;
+            var btn = (ev.target && ev.target.closest) ? ev.target.closest('.toolbar-btn') : null;
+            if (!btn || btn.disabled) return;
+            var rect = btn.getBoundingClientRect();
+            if (!rect.width || !rect.height) return;
+            var size = Math.max(rect.width, rect.height) * 1.8;
+            var ink = document.createElement('span');
+            ink.className = 'ripple-ink';
+            ink.style.width = ink.style.height = size + 'px';
+            ink.style.left = (ev.clientX - rect.left - size / 2) + 'px';
+            ink.style.top = (ev.clientY - rect.top - size / 2) + 'px';
+            btn.appendChild(ink);
+            setTimeout(function() { if (ink.parentNode) ink.parentNode.removeChild(ink); }, 600);
+        }, { passive: true });
+
+        // 入场动画结束后移除标记类，保持 DOM 干净
+        document.addEventListener('animationend', function(ev) {
+            if (ev.animationName === 'thumbDrop' && ev.target && ev.target.classList) {
+                ev.target.classList.remove('thumb-enter');
+            }
+        });
+
+        // 2) 主页卡片 3D 倾斜（仅鼠标等精确指针设备，触屏不启用）
+        if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reduceMotion()) {
+            var bindTilt = function(card) {
+                if (card.dataset.tiltBound === '1') return;
+                card.dataset.tiltBound = '1';
+                card.addEventListener('pointermove', function(ev) {
+                    var r = card.getBoundingClientRect();
+                    var px = (ev.clientX - r.left) / r.width - 0.5;
+                    var py = (ev.clientY - r.top) / r.height - 0.5;
+                    card.style.transform = 'perspective(900px) rotateX(' + (-py * 4).toFixed(2) +
+                        'deg) rotateY(' + (px * 4).toFixed(2) + 'deg) translateY(-2px)';
+                });
+                card.addEventListener('pointerleave', function() { card.style.transform = ''; });
+            };
+            var bindAllTilt = function() {
+                var cards = document.querySelectorAll('.home-card');
+                for (var i = 0; i < cards.length; i++) bindTilt(cards[i]);
+            };
+            bindAllTilt();
+            window.addEventListener('DOMContentLoaded', bindAllTilt);
+        }
+
+        // 3) 数字滚动：从 0 递增到目标值
+        window.animateCount = function(el, to, suffix) {
+            if (!el) return;
+            to = Number(to) || 0;
+            suffix = suffix || '';
+            if (reduceMotion()) { el.textContent = to + suffix; return; }
+            if (el.__countRaf) cancelAnimationFrame(el.__countRaf);
+            var dur = 620, t0 = 0;
+            var step = function(ts) {
+                if (!t0) t0 = ts;
+                var p = Math.min(1, (ts - t0) / dur);
+                var eased = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.round(to * eased) + suffix;
+                el.__countRaf = p < 1 ? requestAnimationFrame(step) : 0;
+            };
+            el.__countRaf = requestAnimationFrame(step);
+        };
+
+        // 4) 页面切换：支持 View Transitions 时交叉淡化，否则走 CSS 入场
+        var origSwitchPage = window.switchPage;
+        if (typeof origSwitchPage === 'function') {
+            window.switchPage = function() {
+                var args = arguments;
+                var apply = function() {
+                    // 过渡期间直接跳到顶部，避免平滑滚动与快照打架
+                    var realScrollTo = window.scrollTo;
+                    window.scrollTo = function() { try { realScrollTo.call(window, 0, 0); } catch (e) {} };
+                    try { origSwitchPage.apply(window, args); }
+                    finally { window.scrollTo = realScrollTo; }
+                };
+                if (reduceMotion() || typeof document.startViewTransition !== 'function') {
+                    apply();
+                    return;
+                }
+                document.body.classList.add('vt-running');
+                try {
+                    var vt = document.startViewTransition(apply);
+                    var done = function() { document.body.classList.remove('vt-running'); };
+                    if (vt && vt.finished && vt.finished.finally) vt.finished.finally(done);
+                    else setTimeout(done, 500);
+                } catch (e) {
+                    document.body.classList.remove('vt-running');
+                    apply();
+                }
+            };
+        }
     })();
     </script>
 </body>
