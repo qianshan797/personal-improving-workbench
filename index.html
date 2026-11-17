@@ -1944,7 +1944,6 @@ window.__newsFetchPromise = (function() {
 
         .page-section {
             display: none;
-            animation: fadeIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .page-section.active {
@@ -8643,23 +8642,10 @@ window.__newsFetchPromise = (function() {
             .home-card { transition: transform 0.18s ease-out; }
         }
 
-        /* 页面切换入场（仅不支持 View Transitions 的浏览器使用） */
-        .page-section.active { animation: pageIn 0.34s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
-        /* 支持 VT 的浏览器由过渡单独负责，关闭 CSS 入场，避免双重动画 */
-        html.vt-supported .page-section.active { animation: none !important; }
-        @keyframes pageIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        /* 新旧视图用相同时长与缓动，保证叠加不透明度恒为 1，不出现中途发白/发黑 */
-        ::view-transition-old(root) { animation: vtOut 0.32s ease both; }
-        ::view-transition-new(root) { animation: vtIn 0.32s ease both; }
-        @keyframes vtOut { from { opacity: 1; } to { opacity: 0; } }
-        @keyframes vtIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+        /* 页面切换不做任何淡入/过渡，避免闪烁 */
 
         @media (prefers-reduced-motion: reduce) {
-            .ripple-ink, .checkin-thumb.thumb-enter, .home-ring-fg, .page-section.active { animation: none !important; }
-            ::view-transition-old(root), ::view-transition-new(root) { animation: none !important; }
+            .ripple-ink, .checkin-thumb.thumb-enter, .home-ring-fg { animation: none !important; }
         }
 
     </style>
@@ -20737,30 +20723,6 @@ CREATE POLICY "allow_all" ON workbench_sync
             };
             el.__countRaf = requestAnimationFrame(step);
         };
-
-        // 4) 页面切换：支持 View Transitions 时交叉淡化，否则走 CSS 入场
-        //    注意：只要浏览器支持 VT，就永久关闭页面 CSS 入场动画，避免过渡结束后动画重播导致“闪两下”
-        var vtSupported = typeof document.startViewTransition === 'function';
-        if (vtSupported) document.documentElement.classList.add('vt-supported');
-        var origSwitchPage = window.switchPage;
-        if (typeof origSwitchPage === 'function') {
-            window.switchPage = function() {
-                var args = arguments;
-                var apply = function() {
-                    // 过渡期间直接跳到顶部，避免平滑滚动与快照打架
-                    var realScrollTo = window.scrollTo;
-                    window.scrollTo = function() { try { realScrollTo.call(window, 0, 0); } catch (e) {} };
-                    try { origSwitchPage.apply(window, args); }
-                    finally { window.scrollTo = realScrollTo; }
-                };
-                if (reduceMotion() || !vtSupported) {
-                    apply();
-                    return;
-                }
-                try { document.startViewTransition(apply); }
-                catch (e) { apply(); }
-            };
-        }
     })();
     </script>
 </body>
