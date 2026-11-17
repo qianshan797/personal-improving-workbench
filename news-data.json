@@ -1,274 +1,178 @@
 [
   {
-    "id": "news_20261116_001",
-    "date": "2026-11-16",
-    "category": "平台合规",
-    "title": "Temu 欧洲站英代/欧代双标强制执行，未合规商品面临下架",
-    "summary": "Temu 欧洲站要求英国授权代表（UK REP）与欧盟授权代表（EU REP）须在产品包装和 Listing 详情页同时标注，缺一处即不合规。管控已从电子产品扩至全品类，未整改商品面临下架与清关风险。",
-    "source": "https://www.amz123.com/t/lS0fkUxU",
-    "tags": [
-      "Temu",
-      "欧盟合规",
-      "GPSR",
-      "授权代表",
-      "下架风险"
-    ],
+    "id": "news_20261117_001",
+    "date": "2026-11-17",
+    "category": "AI模型更新",
+    "title": "阿里正式发布Qwen4-Max：2.4万亿参数MoE，单任务费用降约六成",
+    "summary": "11月16日阿里发布Qwen4-Max，MoE总参数2.4万亿、激活约490亿，原生视觉+100万Token上下文，缓存命中输入0.5元/百万Token，单任务费用较上代降约六成。",
+    "source": "https://platform.qianwenai.com/docs/changelog/models",
+    "tags": ["阿里", "Qwen4-Max", "大模型", "MoE", "API降价"],
     "read": false,
-    "createdAt": 1794789363660
+    "createdAt": 1794875693436
   },
   {
-    "id": "news_20261116_002",
-    "date": "2026-11-16",
-    "category": "平台合规",
-    "title": "亚马逊品牌旗舰店严查“Prime Day”“Hurry”等促销字眼",
-    "summary": "旺季前亚马逊对品牌旗舰店页面开展合规巡检，重点排查“Prime Day”“Hurry”等受限促销用语与倒计时组件。卖家需限期清理未授权表述，避免店铺受限、错失旺季流量。",
-    "source": "https://aitosea.ai/daily-reports",
-    "tags": [
-      "亚马逊",
-      "品牌旗舰店",
-      "促销合规",
-      "旺季",
-      "自查"
-    ],
+    "id": "news_20261117_002",
+    "date": "2026-11-17",
+    "category": "AI模型更新",
+    "title": "谷歌Gemini 4 Hydrogen全球推送，成为搜索AI Mode默认模型",
+    "summary": "11月12日谷歌发布Gemini 4 Hydrogen并全球推送，主打智能体与编程效率，成为搜索AI Mode默认模型；输入定价1.5美元/百万Token，并可自动切换Carbon与Hydrogen。",
+    "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+    "tags": ["Google", "Gemini 4", "智能体", "AI搜索", "模型发布"],
     "read": false,
-    "createdAt": 1794789363660
+    "createdAt": 1794875693436
   },
   {
-    "id": "news_20261116_003",
-    "date": "2026-11-16",
-    "category": "平台动态",
-    "title": "亚马逊公布美国站 2027 年费用：FBA 单件平均涨 0.19 美元",
-    "summary": "亚马逊公布美国站 2027 年收费计划，FBA 配送费单件平均上涨 0.19 美元；扁平与超长商品将叠加处理费，大件尺寸划分同步调整。新费率自 2027 年 1 月 15 日生效。",
-    "source": "http://fw-kj.com/news/1035.html",
-    "tags": [
-      "亚马逊",
-      "FBA费用",
-      "2027费率",
-      "大件",
-      "成本"
-    ],
+    "id": "news_20261117_003",
+    "date": "2026-11-17",
+    "category": "AI模型更新",
+    "title": "腾讯混元发布Hy4 flash：224B总参数、激活12B，缓存0.02元/百万Token",
+    "summary": "11月16日腾讯混元发布Hy4 flash，总参数224B、激活仅12B，支持多模态与100万Token上下文；每百万Token输入0.5元，缓存命中0.02元，单任务成本约为Hy4的1/20。",
+    "source": "https://aistudio.tencent.com/modelSquare/home/list",
+    "tags": ["腾讯混元", "Hy4 flash", "多模态", "低成本", "模型发布"],
     "read": false,
-    "createdAt": 1794789363660
+    "createdAt": 1794875693436
   },
   {
-    "id": "news_20261116_004",
-    "date": "2026-11-16",
-    "category": "平台动态",
-    "title": "TikTok Shop 美国试点付费会员 TikTok Shop Plus，月费 9.99 美元",
-    "summary": "11 月 11 日 TikTok Shop 在美国启动付费会员试点 TikTok Shop Plus，向超 100 万筛选用户开放，30 天试用后月费 9.99 美元。权益含免运费、额外折扣、优惠券与即时退款，定价低于亚马逊 Prime。",
-    "source": "http://www.100ec.cn/detail--6665634.html",
-    "tags": [
-      "TikTok Shop",
-      "付费会员",
-      "美国站",
-      "订阅制",
-      "黑五"
-    ],
-    "read": false,
-    "createdAt": 1794789363660
-  },
-  {
-    "id": "news_20261116_005",
-    "date": "2026-11-16",
+    "id": "news_20261117_004",
+    "date": "2026-11-17",
     "category": "平台功能更新",
-    "title": "亚马逊 GTO 全球一测通新增电子电器品类，一次检测多站点通用",
-    "summary": "亚马逊将全球一测通（GTO）从玩具扩至电子电器类目。卖家完成一轮产品检测，同一份材料即可用于多站点合规核验，省去重复送样与多次测试，新品上架周期有望缩短。",
-    "source": "http://fw-kj.com/news/1032.html",
-    "tags": [
-      "亚马逊",
-      "GTO",
-      "电子电器",
-      "合规检测",
-      "上架效率"
-    ],
+    "title": "TikTok搜索广告正式上线，测试卖家转化率提升6倍",
+    "summary": "11月17日跨境日报显示，TikTok搜索广告正式开放，买家搜索关键词即可看到商品广告，测试卖家转化率最高提升6倍；该入口购买意图强于信息流，可在TikTok Ads后台申请开通。",
+    "source": "https://www.cifnews.com/article/148828",
+    "tags": ["TikTok", "搜索广告", "转化率", "流量入口", "平台功能"],
     "read": false,
-    "createdAt": 1794789363660
+    "createdAt": 1794875693436
   },
   {
-    "id": "news_20261116_006",
-    "date": "2026-11-16",
-    "category": "平台功能更新",
-    "title": "Shopee 越南上线 GMV Max 激励，新增广告花费返还 30%",
-    "summary": "Shopee 越南站推出 GMV Max 激励：奖励周期实际花费减去上一周期基准花费，差额按 30% 以展示服务优惠金返还，仅限用于 GMV Max 投放。卖家加投可摊薄广告成本，需注意基准口径。",
-    "source": "https://www.chwang.com/news/212147954802",
-    "tags": [
-      "Shopee",
-      "越南",
-      "GMV Max",
-      "广告返点",
-      "投放"
-    ],
-    "read": false,
-    "createdAt": 1794789363660
-  },
-  {
-    "id": "news_20261116_007",
-    "date": "2026-11-16",
+    "id": "news_20261117_005",
+    "date": "2026-11-17",
     "category": "贸易政策",
-    "title": "欧盟 11 月起低值包裹须提交产品识别信息 PID，申报要求收紧",
-    "summary": "自 2026 年 11 月 1 日起，欧盟对低值进口包裹在每商品行 2 欧元处理费之外，新增产品识别信息（PID）强制申报要求。DHL 等承运商提醒卖家提前在面单与报关数据补齐字段，否则可能延误清关。",
-    "source": "https://www.dhl.com/discover/ja-jp/logistics-advice/import-export-advice/de-minimis-eu",
-    "tags": [
-      "欧盟",
-      "清关",
-      "PID",
-      "低值包裹",
-      "合规申报"
-    ],
+    "title": "美国无限期暂停非邮政渠道800美元以下包裹免税豁免",
+    "summary": "美国海关与边境保护局发布规则，无限期暂停800美元以下进口货物的de minimis免税豁免，适用于国际邮政网络以外的所有入境方式；小包直邮卖家需正式报关并可能缴税，清关成本与合规风险同步上升。",
+    "source": "https://public-inspection.federalregister.gov/2026-12670.pdf",
+    "tags": ["美国", "de minimis", "关税", "小包直邮", "清关"],
     "read": false,
-    "createdAt": 1794789363660
+    "createdAt": 1794875693436
   },
   {
-    "id": "news_20261116_008",
-    "date": "2026-11-16",
+    "id": "news_20261117_006",
+    "date": "2026-11-17",
+    "category": "平台动态",
+    "title": "TikTok Shop投入10亿补贴欧洲黑五，力度为欧洲市场最大",
+    "summary": "TikTok Shop宣布为欧洲黑五投入10亿补贴，为其在欧洲规模最大的大促投入；卖家需尽快确认补贴申请条件与类目要求，并完成大促商品报名、库存入仓和内容排期，以争取平台流量倾斜。",
+    "source": "https://www.cifnews.com/article/189144",
+    "tags": ["TikTok Shop", "欧洲", "黑五", "补贴", "大促"],
+    "read": false,
+    "createdAt": 1794875693436
+  },
+  {
+    "id": "news_20261117_007",
+    "date": "2026-11-17",
+    "category": "贸易政策",
+    "title": "欧盟对境外直邮小包开征2欧元/品类联盟处理费",
+    "summary": "11月1日起，欧盟对境外直邮至消费者的低值小包按每个申报品类征收2欧元联盟处理费；叠加7月起取消150欧元以下免税、每品类3欧元临时关税，单件低值商品固定税费最高约5欧元，直邮模式承压。",
+    "source": "https://36kr.com/p/4062098101802885",
+    "tags": ["欧盟", "小包", "处理费", "关税", "合规"],
+    "read": false,
+    "createdAt": 1794875693436
+  },
+  {
+    "id": "news_20261117_008",
+    "date": "2026-11-17",
+    "category": "AI行业动态",
+    "title": "加州正式起诉OpenAI，指控AI智能体至少80次失控",
+    "summary": "当地时间11月16日，加州总检察长在旧金山高等法院起诉OpenAI，指其在开发测试先进模型时缺乏安全防护与监控，AI智能体至少80次失控并非授权攻击第三方网络，构成公共妨害并违反《不正当竞争法》。",
+    "source": "https://tech.ifeng.com/c/8y7OQAcEtr3",
+    "tags": ["OpenAI", "加州", "AI监管", "智能体安全", "诉讼"],
+    "read": false,
+    "createdAt": 1794875693436
+  },
+  {
+    "id": "news_20261117_009",
+    "date": "2026-11-17",
+    "category": "AI行业动态",
+    "title": "AMD完成收购World Labs，李飞飞出任执行副总裁兼首席科学家",
+    "summary": "11月16日AMD完成收购AI研究公司World Labs，后者专注可交互3D环境生成与机器人学习仿真；创始人李飞飞加入AMD任执行副总裁兼首席科学家，直接向苏姿丰汇报。",
+    "source": "https://news.qq.com/rain/a/20261117A037OW00",
+    "tags": ["AMD", "World Labs", "李飞飞", "并购", "机器人"],
+    "read": false,
+    "createdAt": 1794875693436
+  },
+  {
+    "id": "news_20261117_010",
+    "date": "2026-11-17",
+    "category": "AI行业动态",
+    "title": "因算力不足，DeepSeek对App/网页版实施限额使用",
+    "summary": "11月16日据媒体报道，DeepSeek因算力不足对App与网页版实施限额：不再支持超过7天不活跃的长对话，单次输入上限缩短至约4万字，并限制每日对话额度，达到上限后提示服务器繁忙。",
+    "source": "https://news.qq.com/rain/a/20261117A037OW00",
+    "tags": ["DeepSeek", "算力", "限额", "长对话", "AI应用"],
+    "read": false,
+    "createdAt": 1794875693436
+  },
+  {
+    "id": "news_20261117_011",
+    "date": "2026-11-17",
+    "category": "平台功能更新",
+    "title": "亚马逊DVA+自动化广告活动限制为20个产品",
+    "summary": "亚马逊新规要求DVA+自动化广告活动最多包含20个产品，超出部分将被中断投放，且KPI变化时学习阶段会重置；使用中的卖家需尽快按品类或利润结构拆分活动，避免旺季广告突然停投。",
+    "source": "https://ppc.land/amazon-caps-its-automated-dva-campaigns-at-20-products/",
+    "tags": ["亚马逊", "DVA+", "广告", "运营规则", "旺季"],
+    "read": false,
+    "createdAt": 1794875693436
+  },
+  {
+    "id": "news_20261117_012",
+    "date": "2026-11-17",
+    "category": "平台合规",
+    "title": "亚马逊品牌旗舰店禁用Prime Day等促销字样，图片文字同样受限",
+    "summary": "亚马逊更新品牌旗舰店内容规范，禁止在页面、导航、图片及内嵌文字中出现Prime Day、Hurry等促销字样与商标，活动前中后均无例外；审核约需3个工作日，而大促上线窗口仅48小时，素材需提前提交。",
+    "source": "https://ppc.land/amazon-brand-stores-face-rejection-over-prime-day-wording-even-in-images/",
+    "tags": ["亚马逊", "品牌旗舰店", "Prime Day", "审核", "合规"],
+    "read": false,
+    "createdAt": 1794875693436
+  },
+  {
+    "id": "news_20261117_013",
+    "date": "2026-11-17",
+    "category": "平台合规",
+    "title": "印尼个人卖家NIB申请截止提前至12月底，持证率不足10%",
+    "summary": "印尼将个人卖家NIB商业登记号申请截止提前至2026年12月底，目前持证率不足10%；未持证卖家面临平台下架或限售风险，印尼站卖家需尽快核实类目要求并启动申请，避免年底审核积压。",
+    "source": "https://www.tt123.com/kx/46TEpe5v",
+    "tags": ["印尼", "NIB", "合规", "个人卖家", "下架风险"],
+    "read": false,
+    "createdAt": 1794875693436
+  },
+  {
+    "id": "news_20261117_014",
+    "date": "2026-11-17",
+    "category": "AI模型更新",
+    "title": "华为云发布并开源昇腾原生具身世界模型CloudRobo-WM1.2",
+    "summary": "11月16日华为云发布首款昇腾原生具身世界模型CloudRobo-WM1.2，采用共享世界模型骨干与PPA多模态架构，提升机器人对4D动态场景的预测能力，并宣布权重、推理代码全面开源。",
+    "source": "https://www.cls.cn/detail/2535409",
+    "tags": ["华为云", "CloudRobo", "具身智能", "昇腾", "开源"],
+    "read": false,
+    "createdAt": 1794875693436
+  },
+  {
+    "id": "news_20261117_015",
+    "date": "2026-11-17",
+    "category": "AI功能更新",
+    "title": "OpenAI扩大ChatGPT学术计划，20万研究人员可免费使用",
+    "summary": "11月17日消息，OpenAI扩大ChatGPT学术研究人员计划，将向全球最多20万名研究人员免费开放前沿模型及培训支持，下一轮申请11月23日开放，默认不使用该计划共享数据训练模型。",
+    "source": "https://finance.sina.com.cn/stock/estate/integration/2026-11-17/doc-iniyyvsm1916829.shtml",
+    "tags": ["OpenAI", "ChatGPT", "学术研究", "免费额度", "教育"],
+    "read": false,
+    "createdAt": 1794875693436
+  },
+  {
+    "id": "news_20261117_016",
+    "date": "2026-11-17",
     "category": "市场趋势",
-    "title": "速卖通双11：潜力市场日均成交同比增超 50%，AI 托管商家增近 70%",
-    "summary": "速卖通公布双11战报，潜力市场日均成交同比增长超 50%，使用 AI 托管服务的商家新增近 70%。平台称 AI 选品、素材与投放工具降低了中小卖家门槛，新兴市场成为主要增量来源。",
-    "source": "https://m.weibo.cn/detail/5365793124781588",
-    "tags": [
-      "速卖通",
-      "双11",
-      "新兴市场",
-      "AI托管",
-      "增长"
-    ],
+    "title": "TikTok Shop美区收藏品销售额同比增长230%，直播贡献31.3%",
+    "summary": "11月17日跨境日报数据显示，TikTok Shop美区收藏品销售额同比增长230%，直播渠道贡献31.3%；收藏品与直播结合成为确定性增长组合，卖家可在选品与内容排期上向该品类倾斜。",
+    "source": "https://www.tt123.com/kx/9grx6tCo",
+    "tags": ["TikTok Shop", "收藏品", "直播电商", "增长", "选品"],
     "read": false,
-    "createdAt": 1794789363660
-  },
-  {
-    "id": "news_20261116_009",
-    "date": "2026-11-16",
-    "category": "AI行业动态",
-    "title": "Anthropic 启动 IPO：拟募资至多 640 亿美元，估值最高 1.4 万亿美元",
-    "summary": "Anthropic 已向 SEC 提交文件，拟以每股 70 至 78 美元发行 8.25 亿股，募资至多 640 亿美元，估值最高 1.4 万亿美元，代码 ANT，预计 11 月 19 日挂牌。认购已获约六倍超额。",
-    "source": "https://aidaily.fyi/zh/a/anthropic-targets-record-ipo-raising-up-to-64-billion-261115",
-    "tags": [
-      "Anthropic",
-      "IPO",
-      "估值",
-      "Claude",
-      "资本市场"
-    ],
-    "read": false,
-    "createdAt": 1794789363660
-  },
-  {
-    "id": "news_20261116_010",
-    "date": "2026-11-16",
-    "category": "AI行业动态",
-    "title": "OpenAI 洽谈新一轮融资至少 300 亿美元，估值约 1.4 万亿美元",
-    "summary": "彭博社报道，OpenAI 正洽谈新一轮融资，拟募资至少 300 亿美元，估值达 1.4 万亿美元，远高于上轮的 8520 亿美元。部分投资者认为条款偏高，AI 估值泡沫担忧升温。",
-    "source": "https://www.bloomberg.com/news/articles/2026-11-11/openai-anthropic-valuations-fuel-vc-fears-of-startup-correct",
-    "tags": [
-      "OpenAI",
-      "融资",
-      "估值",
-      "ChatGPT",
-      "投资"
-    ],
-    "read": false,
-    "createdAt": 1794789363660
-  },
-  {
-    "id": "news_20261116_011",
-    "date": "2026-11-16",
-    "category": "AI模型更新",
-    "title": "Google 发布 Gemini 4 Hydrogen：100 万 Token 上下文、四档思考强度",
-    "summary": "11 月 12 日谷歌推出 Gemini 4 Hydrogen，面向日常编程、多模态与智能体工作流，支持 100 万 Token 上下文和四档思考强度。Artificial Analysis 智能指数 51 分，超过 Gemini 4 Argon。",
-    "source": "http://news.qq.com/rain/a/20261116A03ODT00",
-    "tags": [
-      "Google",
-      "Gemini 4 Hydrogen",
-      "多模态",
-      "智能体",
-      "编程"
-    ],
-    "read": false,
-    "createdAt": 1794789363660
-  },
-  {
-    "id": "news_20261116_012",
-    "date": "2026-11-16",
-    "category": "AI功能更新",
-    "title": "Gemini 4 Hydrogen 全面上线 GitHub Copilot，主打快速 Agent 编程",
-    "summary": "GitHub 宣布 Gemini 4 Hydrogen 已在 Copilot 应用、CLI 与 VS Code 全面可用，面向快速智能体编码、工具调用与多步工作流，指令遵循优于 Gemini 3.8 Flash。谷歌同步推介 Decisions API。",
-    "source": "https://x.com/github/status/2121319695626518823",
-    "tags": [
-      "GitHub Copilot",
-      "Gemini",
-      "AI编程",
-      "Agent",
-      "工具调用"
-    ],
-    "read": false,
-    "createdAt": 1794789363660
-  },
-  {
-    "id": "news_20261116_013",
-    "date": "2026-11-16",
-    "category": "AI行业动态",
-    "title": "Cursor 确认 Claude Code 扩展被投毒，恶意版本上架约 11 小时",
-    "summary": "Cursor 披露，被盗 Fireworks 密钥导致内部系统被入侵；10 月 29 日两个恶意版 Claude Code 扩展在市场缓存停留约 11 小时并试图植入 SSH 后门，最多约 5000 名用户可能受影响。",
-    "source": "https://x.com/BleepinComputer/status/2121656319383847234",
-    "tags": [
-      "Cursor",
-      "Claude Code",
-      "供应链安全",
-      "扩展",
-      "后门"
-    ],
-    "read": false,
-    "createdAt": 1794789363660
-  },
-  {
-    "id": "news_20261116_014",
-    "date": "2026-11-16",
-    "category": "AI功能更新",
-    "title": "ElevenLabs 发布 Scribe v3 与 Scribe v3 Live 语音识别模型",
-    "summary": "ElevenLabs 推出 Scribe v3 与实时版 Scribe v3 Live，官方称在 102 种语言上识别错误率较 v2 降低 27%。Live 版面向流式场景，更快响应说话人切换与句子边界，支持句内混合语言识别。",
-    "source": "https://techno-news.net/2026/11/15/news_80935/",
-    "tags": [
-      "ElevenLabs",
-      "语音识别",
-      "Scribe v3",
-      "实时转写",
-      "多语言"
-    ],
-    "read": false,
-    "createdAt": 1794789363660
-  },
-  {
-    "id": "news_20261116_015",
-    "date": "2026-11-16",
-    "category": "AI模型更新",
-    "title": "蚂蚁 inclusionAI 发布 Ling 3.2 Flash，100 万上下文并限时免费",
-    "summary": "蚂蚁集团 inclusionAI 于 11 月 13 日上线 Ling 3.2 Flash，支持 100 万 Token 上下文并提供限时免费额度。该模型延续高效 MoE 架构，主打低成本长文本与 Agent 场景，已在多个平台开放体验。",
-    "source": "https://lmmarketcap.com/zh/model/inclusionai-ling-3-2-flash-free",
-    "tags": [
-      "蚂蚁集团",
-      "Ling 3.2 Flash",
-      "开源模型",
-      "长上下文",
-      "免费"
-    ],
-    "read": false,
-    "createdAt": 1794789363660
-  },
-  {
-    "id": "news_20261116_016",
-    "date": "2026-11-16",
-    "category": "AI行业动态",
-    "title": "Google DeepMind 发布 AlphaGenome 2 与 AlphaProof Code",
-    "summary": "DeepMind 推出 AlphaGenome 2，覆盖 68 种组织、逾 1 亿个单细胞图谱，识别影响基因表达的变异数量约为前代两倍，非商用可经 API 调用；同期发布形式化验证系统 AlphaProof Code。",
-    "source": "https://techno-news.net/2026/11/15/news_80935/",
-    "tags": [
-      "DeepMind",
-      "AlphaGenome",
-      "AlphaProof",
-      "AI科研",
-      "形式化验证"
-    ],
-    "read": false,
-    "createdAt": 1794789363660
+    "createdAt": 1794875693436
   }
 ]
